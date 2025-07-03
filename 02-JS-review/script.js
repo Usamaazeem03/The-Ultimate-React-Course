@@ -180,3 +180,12 @@ const updatedBook = {
 };
 console.log(updatedBook);
 ////////////////////////////////////////////////////////
+// Template Literals
+const bookInfo = `Title: ${title}, Author: ${author}, Pages: ${pages}, Publication Date: ${publicationDate}`;
+console.log(bookInfo);
+////////////////////////////////////////////////////////
+// Ternary Operator
+const pagesRange = pages > 1000 ? "over thousand" : "less than 1000";
+// condition ? expressionIfTrue : expressionIfFalse
+console.log(`The book has ${pagesRange} pages.`);
+////////////////////////////////////////////////////////
