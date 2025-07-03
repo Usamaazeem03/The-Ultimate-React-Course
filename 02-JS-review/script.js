@@ -184,8 +184,45 @@ console.log(updatedBook);
 const bookInfo = `Title: ${title}, Author: ${author}, Pages: ${pages}, Publication Date: ${publicationDate}`;
 console.log(bookInfo);
 ////////////////////////////////////////////////////////
-// Ternary Operator
+// Ternary Operator(condition ? expressionIfTrue : expressionIfFalse)
 const pagesRange = pages > 1000 ? "over thousand" : "less than 1000";
 // condition ? expressionIfTrue : expressionIfFalse
 console.log(`The book has ${pagesRange} pages.`);
 ////////////////////////////////////////////////////////
+// ARROW FUNCTIONS
+const bookTitles = data.map((book) => book.title);
+console.log(bookTitles);
+////////////////////////////////////////////////////////
+// SHORT-CIRCUIT AND LOGICAL OPERATORS: &&,||, ??
+// and operator (&&) first value is falsy, return the first value is short-circuiting
+console.log(true && "NO short-circuiting");
+console.log(false && "Is short-circuiting");
+console.log(hasMovieAdaptation && "This book has a movie");
+
+// falsy values: 0, "", null, undefined, NaN
+console.log(0 && "Usama");
+console.log(NaN && "1");
+
+// or operator (||) first value is falsy, return the second value is no short-circuiting
+console.log(false || "This is a truthy value");
+console.log(true || "This is a falsy value");
+
+const urduTranslation = book.translations.urdu || "NOT TRANSLATED";
+console.log(urduTranslation);
+
+const countWrong = book.reviews.librarything || "NO DATA";
+console.log(countWrong);
+
+// nullish coalescing operator (??) first value is null or undefined, return the second value
+const count = book.reviews.librarything?.ratingsCount ?? "NO DATA";
+console.log(count);
+////////////////////////////////////////////////////////
+// OPTIONAL CHAINING
+
+function getTotalReviews(book) {
+  // Using optional chaining (?.) to safely access nested properties
+  const librarything = book.reviews.librarything?.reviewsCount;
+  const goodreads = book.reviews.goodreads.reviewsCount;
+  return librarything + goodreads;
+}
+console.log(getTotalReviews(book));
