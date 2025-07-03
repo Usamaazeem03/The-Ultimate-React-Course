@@ -142,10 +142,9 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
-
+////////////////////////////////////////////////////////
 // Destrcucturing
-
-const book = getBook(2); // Get the book with id 2
+const book = getBook(1); // Get the book with id ...
 // Destructure properties from the book object
 // const title = book.title;
 // const author = book.author;
@@ -157,5 +156,27 @@ console.log(title, author, genres);
 // const primaryGenre = genres[0];
 // const secondaryGenre = genres[1]
 
-const [primaryGenre, secondaryGenre] = genres;
-console.log(primaryGenre, secondaryGenre);
+// const [primaryGenre, secondaryGenre] = genres;
+// console.log(primaryGenre, secondaryGenre);
+
+////////////////////////////////////////////////////////
+// REST/SPREAD OPERATORS
+// with Array
+// rest operator(...)
+const [primaryGenre, secondaryGenre, ...otherGenre] = genres;
+console.log(primaryGenre, secondaryGenre, otherGenre);
+
+// spread operator (...)
+const newGenres = ["epic fantasy", ...genres];
+console.log(newGenres);
+// with objects
+// spread operator (...)
+const updatedBook = {
+  ...book,
+  // Adding a new property
+  movePublicationDate: "2001-12-19",
+  // Overwriting an existing property
+  pages: 1210,
+};
+console.log(updatedBook);
+////////////////////////////////////////////////////////
