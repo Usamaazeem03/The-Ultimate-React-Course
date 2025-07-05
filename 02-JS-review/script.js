@@ -12,7 +12,7 @@ const data = [
       "novels",
       "literature",
     ],
-    hasMovieAdaptation: true,
+    hasMovieAdaptation: false,
     pages: 1216,
     translations: {
       spanish: "El señor de los anillos",
@@ -221,8 +221,64 @@ console.log(count);
 
 function getTotalReviews(book) {
   // Using optional chaining (?.) to safely access nested properties
-  const librarything = book.reviews.librarything?.reviewsCount;
-  const goodreads = book.reviews.goodreads.reviewsCount;
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+  const goodreads = book.reviews.goodreads?.reviewsCount;
   return librarything + goodreads;
 }
 console.log(getTotalReviews(book));
+
+//////////////////////////////////////////////////////
+// ARRAY METHODS
+// Map
+const x = [1, 2, 3, 4, 5].map((num) => num * 2);
+console.log(x);
+
+const titles = data.map((book) => book.title);
+console.log(titles);
+
+const essentialData = data.map((book) => ({
+  title: book.title,
+  author: book.author,
+  reviewsCount: getTotalReviews(book),
+}));
+console.log(essentialData);
+
+// Filter
+const longBooks = data.filter((book) => book.pages > 500);
+console.log(longBooks);
+
+const hasMoviebooks = data
+  .filter((book) => book.hasMovieAdaptation)
+  .filter((book) => book.pages < 1000)
+  .filter((book) => publicationDate < "1900-01-01"); // 😁
+console.log(hasMoviebooks);
+
+const adventureBooks = data
+  .filter((book) => book.genres.includes("adventure"))
+  .map((book) => book.title);
+console.log(adventureBooks);
+
+// Reduce
+//---------------
+// =data.reduce((accumulator, currentValue) => {
+//   // logic to combine accumulator and currentValue
+//   return accumulator;
+// }, initialValue);
+const allBooksPages = data.reduce((total, book) => total + book.pages, 0);
+console.log(allBooksPages);
+
+// Sort
+const arr = [1, 2, 2, 3, 3, 4, 5, 2];
+const sortesdArr = arr.slice().sort((a, b) => a - b);
+console.log(sortesdArr);
+
+// Sort books by publication date
+const sortedBooks = data.sort((a, b) =>
+  a.publicationDate.localeCompare(b.publicationDate)
+);
+console.log(sortedBooks);
+// Sort by pages
+const sortedByPages = data.sort((a, b) => a.pages - b.pages);
+console.log(sortedByPages);
+
+// working with immutable arrays
