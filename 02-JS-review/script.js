@@ -299,3 +299,25 @@ const bookAfterUpdate = booksAfterDelete.map(
   (book) => (book.id === 1 ? { ...book, pages: 1210 } : book) // update one property one object
 );
 console.log(bookAfterUpdate);
+
+////////////////////////////////////////////////////////////
+// Asynchronous JavaScript: Promises, Async/Await, Fetch API
+// Fetch API to get data from a URL
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+console.log("usama");
+//Async/Await
+async function getTodos() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    if (!response.ok) throw new Error("Network response was not ok");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("There was a problem with the fetch operation:", error);
+  }
+}
+getTodos();
+console.log("usama after async function call");
