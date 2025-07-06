@@ -282,3 +282,20 @@ const sortedByPages = data.sort((a, b) => a.pages - b.pages);
 console.log(sortedByPages);
 
 // working with immutable arrays
+const newBook = {
+  id: 6,
+  title: "Harry potter and the Chamber of Secrets",
+  author: "J. K. Rowling",
+};
+const booksAfterAdd = [...data, newBook];
+console.log(booksAfterAdd);
+
+// Delete a book by id
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+console.log(booksAfterDelete);
+
+// Update a book by id
+const bookAfterUpdate = booksAfterDelete.map(
+  (book) => (book.id === 1 ? { ...book, pages: 1210 } : book) // update one property one object
+);
+console.log(bookAfterUpdate);
