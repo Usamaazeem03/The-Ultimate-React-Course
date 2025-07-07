@@ -287,6 +287,7 @@ const newBook = {
   title: "Harry potter and the Chamber of Secrets",
   author: "J. K. Rowling",
 };
+// add a new book to the data array
 const booksAfterAdd = [...data, newBook];
 console.log(booksAfterAdd);
 
