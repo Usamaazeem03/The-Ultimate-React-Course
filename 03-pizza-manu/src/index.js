@@ -50,12 +50,41 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h1>Hello React!🥰</h1>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Header />
+      <Menu />
     </div>
   );
+}
+
+// creaate ui
+function Header() {
+  return (
+    <header>
+      <h1>hola</h1>
+    </header>
+  );
+}
+
+function Menu() {
+  return (
+    <div>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Footer />
+    </div>
+  );
+}
+function Footer() {
+  return (
+    <footer>{new Date().toLocaleTimeString()}.We're currently open</footer>
+  );
+  // return React.createElement(
+  //   "footer",
+  //   null,
+  //   "we're currently closed, please come back later!"
+  // );
 }
 // new components are created using function
 function Pizza() {
