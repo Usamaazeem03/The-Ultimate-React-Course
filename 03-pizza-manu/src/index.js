@@ -77,6 +77,13 @@ function Menu() {
   );
 }
 function Footer() {
+  // logic to check if the restaurant is open or closed
+  const hour = new Date().getHours();
+  const openingHour = 12;
+  const closingHour = 22;
+  if (hour >= openingHour && hour <= closingHour) alert("We're open!");
+  else alert("We're closed!");
+
   return (
     <footer>{new Date().toLocaleTimeString()}.We're currently open</footer>
   );
