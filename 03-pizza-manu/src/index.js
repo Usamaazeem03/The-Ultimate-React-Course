@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom/client"; // Correct import for React 18+
+import "./index.css"; // External style sheet
+
 //pizza data
 const pizzaData = [
   {
@@ -49,9 +51,10 @@ const pizzaData = [
 // rendering the root component and strict mode
 function App() {
   return (
-    <div>
+    <div className="container header">
       <Header />
       <Menu />
+      <Footer />
     </div>
   );
 }
@@ -59,21 +62,21 @@ function App() {
 // creaate ui
 function Header() {
   return (
-    <header>
-      <h1>hola</h1>
+    <header className="header">
+      <h1>Fast React Pizza Co.</h1>
     </header>
   );
 }
 
 function Menu() {
   return (
-    <div>
+    <main className="menu">
+      <h2>Our menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
       <Pizza />
-      <Footer />
-    </div>
+    </main>
   );
 }
 function Footer() {
@@ -81,11 +84,15 @@ function Footer() {
   const hour = new Date().getHours();
   const openingHour = 12;
   const closingHour = 22;
-  if (hour >= openingHour && hour <= closingHour) alert("We're open!");
-  else alert("We're closed!");
+  const isOpen = hour >= openingHour && hour <= closingHour;
+  console.log(isOpen);
+  // if (hour >= openingHour && hour <= closingHour) alert("We're open!");
+  // else alert("We're closed!");
 
   return (
-    <footer>{new Date().toLocaleTimeString()}.We're currently open</footer>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()}.We're currently open
+    </footer>
   );
   // return React.createElement(
   //   "footer",
@@ -98,7 +105,7 @@ function Pizza() {
   return (
     <div>
       <img src={pizzaData[2].photoName} alt={pizzaData[2].name} />
-      <h2>{pizzaData[2].name}</h2>
+      <h3>{pizzaData[2].name}</h3>
       <p>{pizzaData[2].ingredients}</p>
     </div>
   );
