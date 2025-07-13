@@ -72,13 +72,44 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        name={pizzaData[2].name}
+        ingredients={pizzaData[2].ingredients}
+        price={pizzaData[2].price}
+        photoName={pizzaData[2].photoName}
+      />
+      <Pizza
+        name={pizzaData[1].name}
+        ingredients={pizzaData[1].ingredients}
+        price={pizzaData[1].price}
+        photoName={pizzaData[1].photoName}
+      />
+      <Pizza
+        name={pizzaData[0].name}
+        ingredients={pizzaData[0].ingredients}
+        price={pizzaData[0].price}
+        photoName={pizzaData[0].photoName}
+      />
     </main>
   );
 }
+
+// new components are created using function
+function Pizza(props) {
+  console.log(props);
+  // props
+  return (
+    <div className="pizza">
+      <img src={props.photoName} alt={props.name} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.price + 3}</span>
+      </div>
+    </div>
+  );
+}
+
 function Footer() {
   // logic to check if the restaurant is open or closed
   const hour = new Date().getHours();
@@ -100,16 +131,7 @@ function Footer() {
   //   "we're currently closed, please come back later!"
   // );
 }
-// new components are created using function
-function Pizza() {
-  return (
-    <div>
-      <img src={pizzaData[2].photoName} alt={pizzaData[2].name} />
-      <h3>{pizzaData[2].name}</h3>
-      <p>{pizzaData[2].ingredients}</p>
-    </div>
-  );
-}
+
 // v18+ uses createRoot for rendering
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
