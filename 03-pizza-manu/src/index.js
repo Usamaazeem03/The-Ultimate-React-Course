@@ -108,19 +108,19 @@ function Menu() {
 }
 
 // new components are created using function
-function Pizza(props) {
-  console.log(props);
+function Pizza({ pizzaObj }) {
+  console.log(pizzaObj);
   // Conditional rendering with multiple return
   // it good return complete componet
-  if (props.pizzaObj.soldOut) return null;
+  if (pizzaObj.soldOut) return null;
   // props
   return (
     <li className="pizza">
-      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
       <div>
-        <h3>{props.pizzaObj.name}</h3>
-        <p>{props.pizzaObj.ingredients}</p>
-        <span>{props.pizzaObj.price + 3}</span>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.price}</span>
       </div>
     </li>
   );
@@ -144,10 +144,7 @@ function Footer() {
     <footer className="footer">
       {/* conditional rendering with && Ternaries opt*/}
       {isOpen ? (
-        <div className="order">
-          <p>We're open until {closingHour}:00. Come visit us or order</p>
-          <button className="btn">Order</button>
-        </div>
+        <Order closingHour={closingHour} />
       ) : (
         <p>
           We're happy to welcome you between {openingHour}:00 and {closingHour}
@@ -163,6 +160,16 @@ function Footer() {
   // );
 }
 
+// used more props extract componet JSX
+// useding Destructuring props
+function Order({ closingHour }) {
+  return (
+    <div className="order">
+      <p>We're open until {closingHour}:00. Come visit us or order</p>
+      <button className="btn">Order</button>
+    </div>
+  );
+}
 // v18+ uses createRoot for rendering
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
