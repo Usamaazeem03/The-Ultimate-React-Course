@@ -75,13 +75,18 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
-      {/* conditional rendering with && */}
-      {numPizzas > 0 && (
+      {/* conditional rendering with &&  and Ternaries opt*/}
+      {numPizzas > 0 ? (
         <ul className="pizzas">
           {pizzaData.map((pizza) => (
             <Pizza pizzaObj={pizza} key={pizza.name} />
           ))}
         </ul>
+      ) : (
+        <p>
+          Our kitchen is taking a break! Please check back soon for delicious
+          pizzas.
+        </p>
       )}
       {/* Auto create new array contain data */}
       {/* // Manual
@@ -125,17 +130,23 @@ function Footer() {
   const closingHour = 22;
   const isOpen = hour >= openingHour && hour <= closingHour;
   console.log(isOpen);
+
   // if (hour >= openingHour && hour <= closingHour) alert("We're open!");
   // else alert("We're closed!");
 
   return (
     <footer className="footer">
-      {/* conditional rendering with && */}
-      {openingHour && (
+      {/* conditional rendering with && Ternaries opt*/}
+      {isOpen ? (
         <div className="order">
           <p>We're open until {closingHour}:00. Come visit us or order</p>
           <button className="btn">Order</button>
         </div>
+      ) : (
+        <p>
+          We're happy to welcome you between {openingHour}:00 and {closingHour}
+          :00
+        </p>
       )}
     </footer>
   );
