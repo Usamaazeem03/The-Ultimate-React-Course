@@ -110,6 +110,9 @@ function Menu() {
 // new components are created using function
 function Pizza(props) {
   console.log(props);
+  // Conditional rendering with multiple return
+  // it good return complete componet
+  if (props.pizzaObj.soldOut) return null;
   // props
   return (
     <li className="pizza">
@@ -134,6 +137,9 @@ function Footer() {
   // if (hour >= openingHour && hour <= closingHour) alert("We're open!");
   // else alert("We're closed!");
 
+  // Conditional rendering with multiple return
+  // it not'good return one pice of jsx
+  // if (!isOpen) return <p>CLOSED</p>;
   return (
     <footer className="footer">
       {/* conditional rendering with && Ternaries opt*/}
