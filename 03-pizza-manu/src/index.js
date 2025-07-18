@@ -75,13 +75,21 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
+
       {/* conditional rendering with &&  and Ternaries opt*/}
       {numPizzas > 0 ? (
-        <ul className="pizzas">
-          {pizzaData.map((pizza) => (
-            <Pizza pizzaObj={pizza} key={pizza.name} />
-          ))}
-        </ul>
+        // React fragment
+        <>
+          <p>
+            Authentic Italian cuisine. Enjoy our hand-crafted pizzas made with
+            the freshest ingredients.
+          </p>
+          <ul className="pizzas">
+            {pizzaData.map((pizza) => (
+              <Pizza pizzaObj={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </>
       ) : (
         <p>
           Our kitchen is taking a break! Please check back soon for delicious
