@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -5,20 +6,21 @@ const messages = [
 ];
 
 export default function App() {
-  const step = 3;
+  const [step, setStap] = useState(1);
+
   // EventHandlers function
   function handlePrevious() {
-    console.log("Previous step clicked");
+    if (step > 1) setStap(step - 1);
   }
   function handleNext() {
-    console.log("Previous step clicked");
+    if (step < messages.length) setStap(step + 1);
   }
   return (
     <div className="steps">
       <div className="numbers">
-        <div className={`${step >= 1 ? "active" : ""}`}>1</div>
-        <div className={`${step >= 2 ? "active" : ""}`}>2</div>
-        <div className={`${step >= 3 ? "active" : ""}`}>3</div>
+        <div className={step >= 1 ? "active" : ""}>1</div>
+        <div className={step >= 2 ? "active" : ""}>2</div>
+        <div className={step >= 3 ? "active" : ""}>3</div>
       </div>
 
       <p className="message">
