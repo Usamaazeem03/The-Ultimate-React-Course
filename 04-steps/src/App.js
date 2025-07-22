@@ -6,19 +6,32 @@ const messages = [
 ];
 
 export default function App() {
+  return (
+    <div>
+      <Staps />
+      <Staps />
+    </div>
+  );
+}
+function Staps() {
   const [step, setStap] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
   // EventHandlers function
   function handlePrevious() {
-    if (step > 1) setStap(step - 1);
+    // update state based on the current step {used call back function}
+    if (step > 1) setStap((s) => s - 1);
   }
   function handleNext() {
-    if (step < messages.length) setStap(step + 1);
+    // update state based on the current step {used call back function}
+    if (step < messages.length) {
+      setStap((s) => s + 1);
+      // setStap((s) => s + 1);// not update state based on current stete,
+    }
   }
   return (
-    <>
-      <button className="close" onClick={() => setIsOpen(!isOpen)}>
+    <div>
+      <button className="close" onClick={() => setIsOpen((is) => !is)}>
         &times;
       </button>
       {isOpen && (
@@ -49,6 +62,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
