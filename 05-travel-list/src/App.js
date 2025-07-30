@@ -29,6 +29,8 @@ function Form({ onAddItems }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!description || quantity < 1) return;
+    console.log("Adding item:", description, quantity);
     const newItem = {
       description,
       quantity,
