@@ -1,4 +1,4 @@
-# <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="60" /></p> React Learning Journey
+# <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="60" /> React Learning Journey
 
 This repository contains my notes, exercises, and projects from the React course I am following on Udemy.  
 I am using this repo as my personal learning log help others + project showcase.
