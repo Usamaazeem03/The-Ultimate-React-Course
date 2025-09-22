@@ -1,8 +1,17 @@
 [build]
-  command = "npm run build"
+  base = "00-Section1-Welcome/02-First-React-Project/letter-quest"
+  command = "CI= npm run build"
   publish = "build"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+
+[build.processing]
+  skip_processing = false
