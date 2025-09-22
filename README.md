@@ -32,7 +32,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 ## 🗂️ Repo Structure
 
-- `01-Intro/` → Basic setup and first React components
+- `00-Intro/` → Basic setup and first React components mini project
 - `README.md` → You are here!
 
 ---
@@ -40,6 +40,7 @@ I am using this repo as my personal learning log help others + project showcase.
 ## 📆 Progress Log
 
 - **Week 1:** Setup, JSX, first components ✅
+  ! [Mini Project: Letter Quest](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md)
 
 ---
 
