@@ -14,9 +14,9 @@ This app randomly generates the alphabet. It is best for teaching fun way alphab
 
 ### Live View
 
-![Letter Quest Computer View](./public/logo.png/app-computer-view.png)
-![Letter Quest Mobile View](./public/logo.png/app-mobile-view.png)
+[Letter Quest Computer View](./public/logo.png/app-computer-view.png)
+[Letter Quest Mobile View](./public/logo.png/app-mobile-view.png)
 
 ### Live Link
 
-[Letter Quest Live]()
+[Letter Quest Live link](https://letterquest.netlify.app/)
