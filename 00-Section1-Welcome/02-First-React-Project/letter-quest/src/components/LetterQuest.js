@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export function LetterQuest({ alphabet, isSentence, onNext, onSpeak, count }) {
   return (
     <div className="w-full max-w-md p-6 m-2 bg-white/60 dark:bg-gray-800/50 rounded-2xl shadow-lg backdrop-blur-md">
