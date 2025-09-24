@@ -41,6 +41,8 @@ I am using this repo as my personal learning log help others + project showcase.
   → 01-Why-Do-Front-End-Frameworks-Exist.txt
   → 02-What-is React.txt
   → 03-Pure-react/index.html
+- `03-Section4-Essential-JvaScript/`
+  →
 - `README.md` → You are here!
 
 ---
@@ -48,7 +50,7 @@ I am using this repo as my personal learning log help others + project showcase.
 ## 📆 Progress Log
 
 - **Week 1:** Setup and First Look JSX, Components, Peops and make [Mini Project](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md) called Letter Quest ✅
-- **Week 2:** monday
+- **Week 2:** understand Pure Reacd, Setting Up a Project with CRA/Vite, Essential-JvaScript
 
 ---
 
