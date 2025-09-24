@@ -40,6 +40,7 @@ I am using this repo as my personal learning log help others + project showcase.
 - `02-Section3-AFirst-Look-at-React/`
   → 01-Why-Do-Front-End-Frameworks-Exist.txt
   → 02-What-is React.txt
+  → 03-Pure-react/index.html
 - `README.md` → You are here!
 
 ---
