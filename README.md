@@ -32,15 +32,21 @@ I am using this repo as my personal learning log help others + project showcase.
 
 ## 🗂️ Repo Structure
 
-- `00-Intro/` → Basic setup and first React components mini project
+- `00-Section1-Welcome/`
+  → 01-Course-Roadmap-and-projects.txt/Course Roadmap
+  → 02-First-React-Project/[mini project](https://letterquest.netlify.app/)
+- `01-Section2-Part1-React-Fundamentals/`
+  → 01-Introduction.txt
+- `02-Section3-AFirst-Look-at-React/`
+  → 01-Why-Do-Front-End-Frameworks-Exist.txt
 - `README.md` → You are here!
 
 ---
 
 ## 📆 Progress Log
 
-- **Week 1:** Setup, JSX, first components ✅
-  ! [Mini Project: Letter Quest](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md)
+- **Week 1:** Setup and First Look JSX, Components, Peops and make [Mini Project](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md) called Letter Quest ✅
+- **Week 2:** monday
 
 ---
 
