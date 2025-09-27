@@ -42,8 +42,9 @@ I am using this repo as my personal learning log help others + project showcase.
   → 02-What-is React.txt
   → 03-Pure-react/index.html
 - `03-Section4-Essential-JvaScript/`
-  → 01-Destructuring-ObjectAndArrays
-  → 02
+  → 01-Destructuring-ObjectAndArrays.js
+  → 02-RestAndSpreadOPT.js
+  → 03-TemplateLiterals.js
 - `README.md` → You are here!
 
 ---
