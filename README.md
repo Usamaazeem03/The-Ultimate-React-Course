@@ -45,6 +45,8 @@ I am using this repo as my personal learning log help others + project showcase.
   → 01-Destructuring-ObjectAndArrays.js
   → 02-RestAndSpreadOPT.js
   → 03-TemplateLiterals.js
+  → 04-TernariesInsteadOfIfEles.js
+  → 05-ArrowFunction.js
 - `README.md` → You are here!
 
 ---
