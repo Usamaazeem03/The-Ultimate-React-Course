@@ -48,6 +48,7 @@ I am using this repo as my personal learning log help others + project showcase.
   → 04-TernariesInsteadOfIfEles.js
   → 05-ArrowFunction.js
   → 06-ShortCircuiting.js
+  → 07-OptionalChaning.js
 - `README.md` → You are here!
 
 ---
