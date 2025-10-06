@@ -50,6 +50,9 @@ I am using this repo as my personal learning log help others + project showcase.
   → 06-ShortCircuiting.js
   → 07-OptionalChaning.js
   → 08-ArrayMapMethod.js
+  → 09-ArrayFilterMethod.js
+  → 10-ArrayReduceMethod.js
+  → ArraySortMethod.js
 - `README.md` → You are here!
 
 ---
