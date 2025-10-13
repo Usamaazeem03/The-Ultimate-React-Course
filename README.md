@@ -54,6 +54,8 @@ I am using this repo as my personal learning log help others + project showcase.
   → 10-ArrayReduceMethod.js
   → 11-ArraySortMethod.js
   → 12-ImmutableArrays.js
+  → 13-Promises.js
+  → \_\_Async/Await
 - `README.md` → You are here!
 
 ---
