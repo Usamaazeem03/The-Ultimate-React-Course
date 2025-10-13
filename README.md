@@ -52,7 +52,8 @@ I am using this repo as my personal learning log help others + project showcase.
   → 08-ArrayMapMethod.js
   → 09-ArrayFilterMethod.js
   → 10-ArrayReduceMethod.js
-  → ArraySortMethod.js
+  → 11-ArraySortMethod.js
+  → 12-ImmutableArrays.js
 - `README.md` → You are here!
 
 ---
