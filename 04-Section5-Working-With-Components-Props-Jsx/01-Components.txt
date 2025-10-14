@@ -1,0 +1,6 @@
+// COMPONENTS AS BUILDING BLOCKS
+👉 React applications are entirely made out of components.
+👉 Building blocks of user interfaces in React.
+👉 Place od UI that has its own data, logic, and appearance(how it works and looks)
+👉 We build complex UIs by building multiple components and combining them.
+👉 Components can be reused, nested inside each other, and pass data betwen them. 
