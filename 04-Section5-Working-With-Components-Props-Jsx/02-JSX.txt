@@ -1,0 +1,15 @@
+// Deep understanding JSX.
+👉 Declarative syntax to describe what components look like and how they work.
+👉 components must return a block of JSX.
+👉 Extension fo javaScript that allows us to embed JavaScript, CSS and React componets into HTML.
+👉 Each JSX element is converted to a React.crearElement fiunction call
+
+// JSX is Declarative
+// what is Declarative?
+👉 Describe what UI should look like using KSX, hased on current data .
+👉 React is an abstraction away form DOM: we never touch touch the DOM.
+👉 Inderad,wer think of the UI as a reflection of the current data.
+
+// what is Imperative?
+👉 Manual DOM element selections and DOM traversing.
+👉 Step-by-step DOM mutation until we reach the desired UI.
