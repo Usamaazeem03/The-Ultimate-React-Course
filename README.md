@@ -30,11 +30,13 @@ I am using this repo as my personal learning log help others + project showcase.
 
 ---
 
+## 🗂️ Project Repository Structure
+
 .
 ├── 00-Section1-Welcome/
 │ ├── 01-Course-Roadmap-and-projects.txt
 │ └── 02-First-React-Project/
-│ └── mini-project ➝ https://letterquest.netlify.app/
+│ └── mini-project → https://letterquest.netlify.app/
 │
 ├── 01-Section2-Part1-React-Fundamentals/
 │ └── 01-Introduction.txt
@@ -60,7 +62,6 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 12-ImmutableArrays.js
 │ ├── 13-Promises.js
 │ └── 14-Async-Await.js
-│ 
 │
 ├── 04-Section5-Working-With-Components-Props-JSX/
 │ ├── 00-Rendering-The-Root-Component-And-Strict-Mode/
@@ -69,7 +70,7 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 02-JSX.txt
 │ └── 03-Props.txt
 │
-└── README.md ➝ You are here!
+└── README.md → You are here!
 
 ## 📆 Progress Log
 
