@@ -30,47 +30,52 @@ I am using this repo as my personal learning log help others + project showcase.
 
 ---
 
-## 🗂️ Repo Structure
-
-- `00-Section1-Welcome/`
-  → 01-Course-Roadmap-and-projects.txt/Course Roadmap
-  → 02-First-React-Project/[mini project](https://letterquest.netlify.app/)
-- `01-Section2-Part1-React-Fundamentals/`
-  → 01-Introduction.txt
-- `02-Section3-AFirst-Look-at-React/`
-  → 01-Why-Do-Front-End-Frameworks-Exist.txt
-  → 02-What-is React.txt
-  → 03-Pure-react/index.html
-- `03-Section4-Essential-JvaScript/`
-  → 01-Destructuring-ObjectAndArrays.js
-  → 02-RestAndSpreadOPT.js
-  → 03-TemplateLiterals.js
-  → 04-TernariesInsteadOfIfEles.js
-  → 05-ArrowFunction.js
-  → 06-ShortCircuiting.js
-  → 07-OptionalChaning.js
-  → 08-ArrayMapMethod.js
-  → 09-ArrayFilterMethod.js
-  → 10-ArrayReduceMethod.js
-  → 11-ArraySortMethod.js
-  → 12-ImmutableArrays.js
-  → 13-Promises.js
-  → \_\_Async/Await
-- `04-Section5-Working-With-Components-Props-Jsx/`
-  → `00-Rendering-The-Root-Component-And-Strict-Mode/`
-  → pizza-menu
-  → 01-Components
-  → 02-JSX.txt
-  → 03-Props.txt
-- `README.md` → You are here!
-
----
+.
+├── 00-Section1-Welcome/
+│ ├── 01-Course-Roadmap-and-projects.txt
+│ └── 02-First-React-Project/
+│ └── mini-project ➝ https://letterquest.netlify.app/
+│
+├── 01-Section2-Part1-React-Fundamentals/
+│ └── 01-Introduction.txt
+│
+├── 02-Section3-AFirst-Look-at-React/
+│ ├── 01-Why-Do-Front-End-Frameworks-Exist.txt
+│ ├── 02-What-is-React.txt
+│ └── 03-Pure-react/
+│ └── index.html
+│
+├── 03-Section4-Essential-JavaScript/
+│ ├── 01-Destructuring-ObjectAndArrays.js
+│ ├── 02-RestAndSpreadOPT.js
+│ ├── 03-TemplateLiterals.js
+│ ├── 04-TernariesInsteadOfIfElse.js
+│ ├── 05-ArrowFunction.js
+│ ├── 06-ShortCircuiting.js
+│ ├── 07-OptionalChaining.js
+│ ├── 08-ArrayMapMethod.js
+│ ├── 09-ArrayFilterMethod.js
+│ ├── 10-ArrayReduceMethod.js
+│ ├── 11-ArraySortMethod.js
+│ ├── 12-ImmutableArrays.js
+│ ├── 13-Promises.js
+│ └── 14-Async-Await.js
+│ 
+│
+├── 04-Section5-Working-With-Components-Props-JSX/
+│ ├── 00-Rendering-The-Root-Component-And-Strict-Mode/
+│ ├── pizza-menu/
+│ ├── 01-Components/
+│ ├── 02-JSX.txt
+│ └── 03-Props.txt
+│
+└── README.md ➝ You are here!
 
 ## 📆 Progress Log
 
 - **Week 1:** Setup and First Look JSX, Components, Peops and make [Mini Project](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md) called Letter Quest ✅
 - **Week 2:** understand Pure Reacd, Setting Up a Project with CRA/Vite, Essential-JvaScript, one Private Project for UK-Client ✅
-- **Week 3:** [Mini Project](), Debugging, Deep understand Components JSX or Props, Rendering
+- **Week 3:** [Mini Project](), Debugging, Deep understand Components JSX or Props, Rendering, Conditional Rendering &&/?/Multiple returns,
 
 ---
 

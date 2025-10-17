@@ -34,6 +34,7 @@ function Menu() {
               ingredients={pizza.ingredients}
               photoName={pizza.photoName}
               price={pizza.price}
+              soldOut={pizza.soldOut}
               key={pizza.name}
             />
           ))}
@@ -71,6 +72,7 @@ function Footer() {
 
 // componet
 function Pizza(props) {
+  if (props.soldOut) return null;
   return (
     <li className="pizza">
       <img src={props.photoName} alt="Pizza" />
