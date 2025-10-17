@@ -23,24 +23,24 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
-      <Pizza
+      <ul className="pizzas">
+        {pizzaData.map((pizza) => (
+          <Pizza
+            name={pizza.name}
+            ingredients={pizza.ingredients}
+            photoName={pizza.photoName}
+            price={pizza.price}
+            key={pizza.name}
+          />
+        ))}
+      </ul>
+
+      {/* <Pizza
         name={pizzaData[0].name}
         ingredients={pizzaData[0].ingredients}
         photoName={pizzaData[0].photoName}
         price={pizzaData[0].price}
-      />
-      <Pizza
-        name={pizzaData[1].name}
-        ingredients={pizzaData[1].ingredients}
-        photoName={pizzaData[1].photoName}
-        price={pizzaData[1].price}
-      />
-      <Pizza
-        name={pizzaData[2].name}
-        ingredients={pizzaData[2].ingredients}
-        photoName={pizzaData[2].photoName}
-        price={pizzaData[2].price}
-      />
+      /> */}
     </main>
   );
 }
@@ -60,14 +60,14 @@ function Footer() {
 // componet
 function Pizza(props) {
   return (
-    <div className="pizza">
+    <li className="pizza">
       <img src={props.photoName} alt="Pizza" />
       <div>
         <h3>{props.name}</h3>
         <p>{props.ingredients}</p>
         <span>{props.price}</span>
       </div>
-    </div>
+    </li>
   );
 }
 // React 18V
