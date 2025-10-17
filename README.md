@@ -60,6 +60,8 @@ I am using this repo as my personal learning log help others + project showcase.
   → `00-Rendering-The-Root-Component-And-Strict-Mode/`
   → pizza-menu
   → 01-Components
+  → 02-JSX.txt
+  → 03-Props.txt
 - `README.md` → You are here!
 
 ---
@@ -68,7 +70,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 1:** Setup and First Look JSX, Components, Peops and make [Mini Project](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md) called Letter Quest ✅
 - **Week 2:** understand Pure Reacd, Setting Up a Project with CRA/Vite, Essential-JvaScript, one Private Project for UK-Client ✅
-- **Week 3:** [Mini Project](), Debugging, Deep understand Components,
+- **Week 3:** [Mini Project](), Debugging, Deep understand Components, JSX or Props,
 
 ---
 

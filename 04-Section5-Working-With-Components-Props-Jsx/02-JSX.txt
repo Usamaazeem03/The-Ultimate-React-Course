@@ -13,3 +13,14 @@
 // what is Imperative?
 👉 Manual DOM element selections and DOM traversing.
 👉 Step-by-step DOM mutation until we reach the desired UI.
+
+// Rules of JSX
+👉 Jsx works essentially like HTML, but we can enter "JavaScript" by using{}(for text or attributes).
+👉 We can place JavaScript expression inside{}, Example: referenc variables, create arrays or objects, [].map(), ternary oprator,
+👉 Statements are not allowed (if/else, for, switch).
+👉 Jsx Produces a JavaScript expression
+const el = <h1>Hello React!</h1> 
+const el = React.createElement("h1", null, "Hello React!")
+1_ We can place other pieces of JSX inside{}
+2_ We can write JSX anywhere inside a compoent (in if/else, assin to variables, pass it into functons)
+👉 A piece of JSX can only have one root element. if you need more, used <React.Fragment> (or the short <>).
