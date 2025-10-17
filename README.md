@@ -32,6 +32,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 ## 🗂️ Project Repository Structure
 
+```
 .
 ├── 00-Section1-Welcome/
 │ ├── 01-Course-Roadmap-and-projects.txt
@@ -71,6 +72,7 @@ I am using this repo as my personal learning log help others + project showcase.
 │ └── 03-Props.txt
 │
 └── README.md → You are here!
+```
 
 ## 📆 Progress Log
 
