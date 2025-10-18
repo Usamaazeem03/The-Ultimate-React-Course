@@ -82,14 +82,14 @@ function Order({ closeHour }) {
 
 // componet
 function Pizza(props) {
-  if (props.soldOut) return null;
+  // if (props.soldOut) return null;
   return (
-    <li className="pizza">
+    <li className={`pizza ${props.soldOut ? "sold-out" : ""}`}>
       <img src={props.photoName} alt="Pizza" />
       <div>
         <h3>{props.name}</h3>
         <p>{props.ingredients}</p>
-        <span>{props.price}</span>
+        <span>{props.soldOut ? "SOLD OUT" : props.price}</span>
       </div>
     </li>
   );
