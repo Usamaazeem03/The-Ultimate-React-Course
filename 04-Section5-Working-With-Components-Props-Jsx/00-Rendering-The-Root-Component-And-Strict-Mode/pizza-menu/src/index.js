@@ -60,13 +60,16 @@ function Footer() {
   console.log(isOpen);
   return (
     <footer className="footer">
-      {isOpen && (
-        <div className="order">
-          <p>We're open until {closeHour}:00. Come visit us order online.</p>
-          <button className="btn">Order</button>
-        </div>
-      )}
+      {isOpen && <Order closeHour={closeHour} />}
     </footer>
+  );
+}
+function Order({ closeHour }) {
+  return (
+    <div className="order">
+      <p>We're open until {closeHour}:00. Come visit us order online.</p>
+      <button className="btn">Order</button>
+    </div>
   );
 }
 
