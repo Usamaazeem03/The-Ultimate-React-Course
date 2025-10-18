@@ -1,5 +1,0 @@
-// PROPS
-👉 Props are used to pass data from parent components to child components (down rhe components tree).
-👉 Essential tool to configure and customize components (like function parameters).
-👉 With props, parent components control how child components look and work.
-👉 Anything can be passed as props; single values, array, objects, function, even other components.
