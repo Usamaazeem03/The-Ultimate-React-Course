@@ -121,5 +121,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ```
 
+
 ---
 ````
+
+[Scan QR code](./public/pizza_Co_-1024.png)
