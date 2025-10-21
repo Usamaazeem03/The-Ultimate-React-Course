@@ -37,7 +37,7 @@ I am using this repo as my personal learning log help others + project showcase.
 ├── 00-Section1-Welcome/
 │ ├── 01-Course-Roadmap-and-projects.txt
 │ └── 02-First-React-Project/
-│ └── mini-project → https://letterquest.netlify.app/
+│     └── mini-project → https://letterquest.netlify.app/
 │
 ├── 01-Section2-Part1-React-Fundamentals/
 │ └── 01-Introduction.txt
@@ -66,13 +66,15 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 04-Section5-Working-With-Components-Props-JSX/
 │ ├── 00-Rendering-The-Root-Component-And-Strict-Mode/
-│ ├── pizza-menu/
-│ ├── 01-Components/
+│ │   └── mini-project → https://pizza-menu-v1.vercel.app/
+│ ├── 01-Components.txt
 │ ├── 02-JSX.txt
 │ └── 03-Props.txt
 │
 ├── 05-Section6-State-Events-And-Forms-more/
 │ ├── 00-Overview
+│ ├── 01-Build-a-steps-Component/
+│ ├── └── mini-project →
 │ └──
 │
 └── README.md → You are here!
@@ -83,7 +85,7 @@ I am using this repo as my personal learning log help others + project showcase.
 - **Week 1:** Setup and First Look JSX, Components, Peops and make [Mini Project](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md) called Letter Quest ✅
 - **Week 2:** understand Pure Reacd, Setting Up a Project with CRA/Vite, Essential-JvaScript, one Private Project for UK-Client ✅
 - **Week 3:** [Mini Project](./04-Section5-Working-With-Components-Props-Jsx/00-Rendering-The-Root-Component-And-Strict-Mode/pizza-menu/README.md), Debugging, Deep understand Components JSX or Props, Rendering, Conditional Rendering &&/?/Multiple returns, destucturing Props, React Fragments,Classes and text conditionally ✅
-- **Week 4:**
+- **Week 4:** [Mini Project](), Handling events,
 
 ---
 
