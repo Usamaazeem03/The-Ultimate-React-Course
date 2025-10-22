@@ -1,0 +1,11 @@
+// What is State?
+_ State is basically is Data that a component can hold over time,necessary for information 
+that it need to remember throughout the app's lifecycle.
+_like "Component's memory 🧠"
+_"Stae variable"/"piece of state": A single variable in a component (component state)
+_Updating component state triggers React to re-render the component.
+
+💫 Summarizing 
+.State allows dev to do two important things.
+1_Update the component's view(by re-rendering it)
+2_persist local variables between renders.
