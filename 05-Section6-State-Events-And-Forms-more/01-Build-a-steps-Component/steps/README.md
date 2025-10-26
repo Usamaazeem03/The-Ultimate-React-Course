@@ -71,7 +71,7 @@ The above code handles navigation and state management without mutating state di
 2. Navigate to the folder:
 
    ```bash
-   cd .....react-steps-app
+   cd steps
    ```
 
 3. Install dependencies:
