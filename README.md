@@ -74,10 +74,14 @@ I am using this repo as my personal learning log help others + project showcase.
 ├── 05-Section6-State-Events-And-Forms-more/
 │ ├── 00-Overview
 │ ├── 01-Build-a-steps-Component/
-│ ├── └── mini-project →
+│ ├── └── mini-project → not live
 │ ├── 02-What-is-State.txt
 │ ├── 03-Travel-list/
 │ ├── └── mini-project →
+│ └── 04-state-vs-props.txt
+│
+├── 06-Section7-Thinking-in-React-Sate-Mangement/
+│ ├── 00-Overview
 │ └──
 │
 └── README.md → You are here!
@@ -86,9 +90,14 @@ I am using this repo as my personal learning log help others + project showcase.
 ## 📆 Progress Log
 
 - **Week 1:** Setup and First Look JSX, Components, Peops and make [Mini Project](./00-Section1-Welcome/02-First-React-Project/letter-quest/README.md) called Letter Quest ✅
+
 - **Week 2:** understand Pure Reacd, Setting Up a Project with CRA/Vite, Essential-JvaScript, one Private Project for UK-Client ✅
+
 - **Week 3:** [Mini Project](./04-Section5-Working-With-Components-Props-Jsx/00-Rendering-The-Root-Component-And-Strict-Mode/pizza-menu/README.md), Debugging, Deep understand Components JSX or Props, Rendering, Conditional Rendering &&/?/Multiple returns, destucturing Props, React Fragments,Classes and text conditionally ✅
+
 - **Week 4:** [Mini Project](./05-Section6-State-Events-And-Forms-more/01-Build-a-steps-Component/steps/README.md), Handling events, State,[Mini Project](./05-Section6-State-Events-And-Forms-more/03-Grocery-list/listo/README.md), Building layout, Rendering list, Bulding form, conrolled elements, ✅
+
+- **Week 5:**
 
 ---
 
