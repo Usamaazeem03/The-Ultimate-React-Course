@@ -15,16 +15,42 @@ function App() {
   );
 }
 function Logo() {
-  return <h1>🏖️ Far Away 💼</h1>;
+  return <h1>✏️ Listo 🛒</h1>;
 }
 function Form() {
   return (
     <form className="add-form">
-      <h3>What do you for your 🤩 trip?</h3>
+      <h3>Never forget an item again 🛍️</h3>
       <select>
         {Array.from({ length: 20 }, (_, index) => index + 1).map((num) => (
           <option value={num} key={num}>
             {num}
+          </option>
+        ))}
+      </select>
+      <select>
+        {[
+          "kg", // kilograms
+          "g", // grams
+          "mg", // milligrams
+          "liter", // liters
+          "ml", // milliliters
+          "pcs", // pieces
+          "pack", // pack or package
+          "dozen", // 12 items
+          "box", // box
+          "bottle", // bottle
+          "jar", // jar
+          "bag", // bag
+          "can", // can
+          "packet", // packet
+          "tray", // tray
+          "cup", // cup
+          "tbsp", // tablespoon
+          "tsp", // teaspoon
+        ].map((unit) => (
+          <option value={unit} key={unit}>
+            {unit}
           </option>
         ))}
       </select>
@@ -58,7 +84,7 @@ function Item({ item }) {
 function Stats() {
   return (
     <footer className="stats">
-      <em>🫎 You have X items on your list, add you already packed x (X%)</em>
+      <em>🧺 You’ve added X things to your list, and packed X of them (X%)</em>
     </footer>
   );
 }
