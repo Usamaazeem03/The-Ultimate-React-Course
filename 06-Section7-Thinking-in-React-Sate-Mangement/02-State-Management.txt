@@ -1,0 +1,31 @@
+// State Management
+👉 State management: Deciding when to create pieces od state, What types of state are necessary, Where to place each pice of state, and how data flows through the app
+💭 state management like : Giving each piece of state a home,
+but find a right home how?
+// When and Where
+When To Create State________________________________________________________________________________
+need to store data → will data change at some point? -(NO)-> Regular const variable
+                      │
+                      └──(YES)-> Con be compured from existing state/props? -(YES)-> Deriive state
+                                │
+                                └──(NO)-> Should it re-render component? -(NO)-> Ref(useRef)
+    "Always start with local state?"     │
+                                  └──>   └──(YES)-> Place a new piece of state in component
+Where To Place State__________________________________________│______________________________________
+                                                              │
+                                         Onlu used by this component? -(YES)-> Leave in component
+                                         │
+                                         └──(NO)-> Also uesd by chils component? -(YES)-> Pass to child via props
+                                                   │
+🤠 Probaly global state.                    <-(NO)-└──(NO)-> Used by one or a few sibling components? -(YES)-> Lift state up to first common parent
+
+// Local VS. Global State
+// Local State
+👉 State needed only by one or few components
+👉 State that is defined in a component and only that component and child components have access to it (by passing via props)
+☝️ WE SHOULD ALWAYS START WITH LOCAL STATE
+
+// Global State
+👉 State that many components might need
+👉 Shared state that is accessible to every component in the entire application
+☝️ CONTEXT API OR REDUX
