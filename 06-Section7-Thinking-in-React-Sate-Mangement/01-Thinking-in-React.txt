@@ -1,0 +1,18 @@
+// Thinking In React Is A Core Skill
+
+// Thinking In React
+👉 React mindset
+👉 Thinking about components, state, data flow, effects, etc.
+👉 Thinking in state transitiont, not element mutations.
+
+// The Thinking In React Process
+1_Breack the desired UI into components and establish the component tree
+2_Build a static version in React (without state)
+3_Think about state:
+ 👉 When to use state
+ 👉 Types of state: local vs. global
+ 👉 Where to place each piece of state
+4_Establish data flow
+ 👉 One-way data flow
+ 👉 Child-to-parent communication
+ 👉 Accessing global state

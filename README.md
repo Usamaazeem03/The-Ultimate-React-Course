@@ -72,7 +72,7 @@ I am using this repo as my personal learning log help others + project showcase.
 │ └── 03-Props.txt
 │
 ├── 05-Section6-State-Events-And-Forms-more/
-│ ├── 00-Overview
+│ ├── 00-Overview.txt
 │ ├── 01-Build-a-steps-Component/
 │ ├── └── mini-project → not live
 │ ├── 02-What-is-State.txt
@@ -81,7 +81,8 @@ I am using this repo as my personal learning log help others + project showcase.
 │ └── 04-state-vs-props.txt
 │
 ├── 06-Section7-Thinking-in-React-Sate-Mangement/
-│ ├── 00-Overview
+│ ├── 00-Overview.txt
+│ ├── 01-Thinking-in-React.txt
 │ └──
 │
 └── README.md → You are here!

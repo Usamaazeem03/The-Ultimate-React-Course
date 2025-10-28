@@ -1,0 +1,6 @@
+// Thinking in React: State Management
+_Thinking in React
+_State management
+_When and where to create state?
+_Derivrd state
+_Lifting up state
