@@ -1,16 +1,15 @@
 import { useState } from "react";
-const initialItems = [
-  { id: 1, description: "Passports", quantity: 2, packed: false },
-  { id: 2, description: "Socks", quantity: 12, packed: true },
-  { id: 3, description: "Socks", quantity: 1, packed: true },
-  { id: 4, description: "Socks", quantity: 11, packed: true },
-];
 function App() {
+  const [items, setItems] = useState([]);
+
+  function handleAddItem(item) {
+    setItems((items) => [...items, item]);
+  }
   return (
     <div className="app">
       <Logo />
-      <Form />
-      <PackingList />
+      <Form onAddItem={handleAddItem} />
+      <PackingList items={items} />
       <Stats />
     </div>
   );
@@ -19,7 +18,7 @@ function Logo() {
   return <h1>✏️ Listo 🛒</h1>;
 }
 
-function Form() {
+function Form({ onAddItem }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [unit, setUnit] = useState("kg");
@@ -34,11 +33,13 @@ function Form() {
       packed: false,
       id: Date.now(),
     };
+    onAddItem(newItem);
     setDescription("");
     setQuantity(1);
     setUnit("kg");
     console.log(newItem);
   }
+
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>Never forget an item again 🛍️</h3>
@@ -82,15 +83,15 @@ function Form() {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button>Add</button>
+      <button type="submit">Add</button>
     </form>
   );
 }
-function PackingList() {
+function PackingList({ items }) {
   return (
     <div className="list">
       <ul>
-        {initialItems.map((item) => (
+        {items.map((item) => (
           <Item item={item} id={item.id} />
         ))}
       </ul>
@@ -102,7 +103,7 @@ function Item({ item }) {
   return (
     <li>
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
-        {item.description} {item.quantity}
+        {item.quantity} {item.unit} — {item.description}
       </span>
       <button>❌</button>
     </li>
