@@ -99,7 +99,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 4:** [Mini Project](./05-Section6-State-Events-And-Forms-more/01-Build-a-steps-Component/steps/README.md), Handling events, State,[Mini Project](./05-Section6-State-Events-And-Forms-more/03-Grocery-list/listo/README.md), Building layout, Rendering list, Bulding form, conrolled elements, ✅
 
-- **Week 5:** State Management, Lifting Up State
+- **Week 5:** State Management, Lifting Up State, Child to parent communiction,
 
 ---
 
