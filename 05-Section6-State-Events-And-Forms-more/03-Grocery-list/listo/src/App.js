@@ -1,6 +1,7 @@
 import { useState } from "react";
 function App() {
   const [items, setItems] = useState([]);
+  //you also use this deveing state for the stats component but its not look good
 
   function handleAddItem(item) {
     setItems((items) => [...items, item]);
@@ -26,7 +27,7 @@ function App() {
         onDeleteItem={handleDeleteItem}
         onTogglePacked={handleTogglePacked}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
@@ -134,10 +135,41 @@ function Item({ item, onDeleteItem, onTogglePacked }) {
     </li>
   );
 }
-function Stats() {
+function Stats({ items }) {
+  if (items.length === 0) {
+    return (
+      <footer className="stats">
+        <em>🧺 Your list is empty. Start adding some items! 🛒</em>
+      </footer>
+    );
+  }
+  const numItems = items.length;
+  const numPackedItems = items.filter((item) => item.packed).length;
+  const percentPacked =
+    numItems === 0 ? 0 : Math.round((numPackedItems / numItems) * 100);
+
   return (
     <footer className="stats">
-      <em>🧺 You’ve added X things to your list, and packed X of them (X%)</em>
+      <em>
+        {percentPacked === 100 ? (
+          <span
+          // style={{
+          //   display: "flex",
+          //   padding: "0rem 8.5rem",
+          //   textAlign: "center",
+          //   justifyContent: "center",
+          //   alignItems: "center",
+          // }}
+          >
+            🎉 List complete! You’re good to go! 🚀
+          </span>
+        ) : (
+          <span>
+            🧺 You’ve added {numItems} things to your list, and packed{" "}
+            {numPackedItems} of them ({percentPacked}%)
+          </span>
+        )}
+      </em>
     </footer>
   );
 }

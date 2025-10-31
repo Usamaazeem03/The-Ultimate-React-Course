@@ -235,8 +235,8 @@ input[type="checkbox"]:hover {
   backdrop-filter: blur(10px);
   text-align: center;
   font-weight: 700;
-  padding: 2rem 6rem;
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  padding: 2rem 11rem;
+  font-size: clamp(1.8rem, 2vw, 2rem);
   border-radius: 1.2rem;
   color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);

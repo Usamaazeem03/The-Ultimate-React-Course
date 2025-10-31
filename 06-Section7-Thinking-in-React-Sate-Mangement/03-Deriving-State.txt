@@ -1,0 +1,26 @@
+// Deriving State
+_State that is computed form an existing piece of state or from props
+
+Bad Code:
+const [cart, setCart] = useState([
+  {item: "water bottel", price: 50},
+  {item: "milk bottel", price: 150},
+])
+const [numItem, setNumItem] = useState(2)
+const [totalPrice, setTotalPrice] = useState(200)
+
+👎 Three separate pieces of state, even though numitems and totalPrice depend on card
+👎 Need to keep the is sync (update together)
+👎 3 state updates will cause 3 re-renders
+
+Good Code:
+const [cart, setCart] = useState([
+  {item: "water bottel", price: 50},
+  {item: "milk bottel", price: 150},
+])
+const numItem = cart.length;
+const totalPrice =cart.renduce((acc, cur)=> acc + cur.price, 0);
+
+👍 Just reguar variables, no useState
+👍 Cart state is the single source of truth for this related dta
+👍 Works because re-rendering component will automatically re-calculate derived state
