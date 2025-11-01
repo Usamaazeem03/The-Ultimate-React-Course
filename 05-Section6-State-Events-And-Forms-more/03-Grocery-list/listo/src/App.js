@@ -104,10 +104,22 @@ function Form({ onAddItem }) {
   );
 }
 function PackingList({ items, onDeleteItem, onTogglePacked }) {
+  const [sortBy, setSortBy] = useState("input");
+
+  let sortedItems;
+  if (sortBy === "input") sortedItems = items;
+  if (sortBy === "description")
+    sortedItems = items
+      .slice()
+      .sort((a, b) => a.description.localeCompare(b.description));
+  if (sortBy === "packed")
+    sortedItems = items
+      .slice()
+      .sort((a, b) => Number(a.packed) - Number(b.packed));
   return (
     <div className="list">
       <ul>
-        {items.map((item) => (
+        {sortedItems.map((item) => (
           <Item
             item={item}
             key={item.id}
@@ -116,6 +128,14 @@ function PackingList({ items, onDeleteItem, onTogglePacked }) {
           />
         ))}
       </ul>
+
+      <div className="actions">
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+          <option value="input">📝 Sort by Input Order</option>
+          <option value="description">🔤 Sort by Description</option>
+          <option value="packed">🎒 Sort by Packed Status</option>
+        </select>
+      </div>
     </div>
   );
 }
@@ -139,7 +159,17 @@ function Stats({ items }) {
   if (items.length === 0) {
     return (
       <footer className="stats">
-        <em>🧺 Your list is empty. Start adding some items! 🛒</em>
+        <em
+          style={{
+            display: "flex",
+            padding: "0rem 1rem",
+            textAlign: "center",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          🧺 Your list is empty. Start adding some items!
+        </em>
       </footer>
     );
   }
@@ -153,18 +183,26 @@ function Stats({ items }) {
       <em>
         {percentPacked === 100 ? (
           <span
-          // style={{
-          //   display: "flex",
-          //   padding: "0rem 8.5rem",
-          //   textAlign: "center",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          // }}
+            style={{
+              display: "flex",
+              padding: "0rem 3.5rem",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
             🎉 List complete! You’re good to go! 🚀
           </span>
         ) : (
-          <span>
+          <span
+            style={{
+              display: "flex",
+              padding: "0rem",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             🧺 You’ve added {numItems} things to your list, and packed{" "}
             {numPackedItems} of them ({percentPacked}%)
           </span>
