@@ -1,4 +1,4 @@
-// Deriving State
+// Derived State
 _State that is computed form an existing piece of state or from props
 
 Bad Code:
@@ -22,5 +22,5 @@ const numItem = cart.length;
 const totalPrice =cart.renduce((acc, cur)=> acc + cur.price, 0);
 
 👍 Just reguar variables, no useState
-👍 Cart state is the single source of truth for this related dta
+👍 Cart state is the single source of truth for this related data
 👍 Works because re-rendering component will automatically re-calculate derived state
