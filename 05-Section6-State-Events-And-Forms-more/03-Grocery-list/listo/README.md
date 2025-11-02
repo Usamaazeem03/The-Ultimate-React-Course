@@ -1,7 +1,3 @@
-Here’s a clean, professional **README.md** file for your project, inspired by _“Far Away”_, but customized to fit your improved version of the app 👇
-
----
-
 # 🛍️ Listo — Smart Packing List App
 
 **Listo** is a modern React-based packing list app inspired by the _“Far Away”_ project from the development course.
