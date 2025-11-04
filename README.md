@@ -102,6 +102,8 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 5:** State Management, Controlled Components, Lifting Up State, Child to parent communiction, Derived State, [Mini Project](./05-Section6-State-Events-And-Forms-more/03-Grocery-list/listo/README.md) Not dully complete,✅
 
+- **Week 6:** Firebase,
+
 ---
 
 ## ⚡ Getting Started
