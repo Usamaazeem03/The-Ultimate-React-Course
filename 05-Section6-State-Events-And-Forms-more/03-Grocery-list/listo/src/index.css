@@ -284,3 +284,241 @@ input[type="checkbox"]:hover {
     padding: 1.5rem;
   }
 }
+
+/* ---------- AUTH CONTAINER ---------- */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* ---------- AUTH CARD ---------- */
+.auth-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 1.6rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  padding: 3rem 4rem;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-card h2 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.auth-card p {
+  color: #fff8e1;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- FORM ---------- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 100%;
+}
+
+.auth-form input {
+  padding: 1.2rem 1.6rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.6rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #5a3e2b;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(255, 183, 77, 0.5);
+}
+
+/* ---------- BUTTONS ---------- */
+.email-btn {
+  background: linear-gradient(135deg, #e5771f, #f8b500);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.email-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(229, 119, 31, 0.4);
+}
+
+/* ---------- GOOGLE BUTTON ---------- */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #fff;
+  color: #5a3e2b;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.google-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.google-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+}
+
+/* ---------- TOGGLE LINK ---------- */
+.toggle-auth {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #fff8e1;
+}
+
+.toggle-auth span {
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-auth span:hover {
+  color: #ffe082;
+}
+
+/* ---------- DIVIDER ---------- */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+  opacity: 0.9;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0 1rem;
+}
+
+/* ---------- LOGGED-IN VIEW ---------- */
+.auth-logged {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 100%;
+  max-width: 400px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff8e1;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 107, 107, 0.3);
+}
+
+/* ---------- ERROR ---------- */
+.error-text {
+  color: #ffbdbd;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem;
+  }
+
+  .auth-card h2 {
+    font-size: 2.2rem;
+  }
+
+  .auth-form input,
+  .email-btn,
+  .google-btn {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  .user-info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logout-btn {
+    padding: 1rem 2rem;
+  }
+}

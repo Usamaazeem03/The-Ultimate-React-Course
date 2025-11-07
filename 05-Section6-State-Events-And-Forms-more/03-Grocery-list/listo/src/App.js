@@ -3,6 +3,7 @@ import Logo from "./components/Logo";
 import Form from "./components/Form";
 import PackingList from "./components/PackingList";
 import Stats from "./components/Stats";
+import Auth from "./components/Auth";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -29,17 +30,25 @@ function App() {
     );
     if (confirm) setItems([]);
   }
+  const User = null; //TODO: replace with real user authentication logic
   return (
     <div className="app">
-      <Logo />
-      <Form onAddItem={handleAddItem} />
-      <PackingList
-        items={items}
-        onDeleteItem={handleDeleteItem}
-        onTogglePacked={handleTogglePacked}
-        onClearList={handleClearList}
-      />
-      <Stats items={items} />
+      {!User ? (
+        /* Show login/signup form */
+        <Auth />
+      ) : (
+        <>
+          <Logo />
+          <Form onAddItem={handleAddItem} />
+          <PackingList
+            items={items}
+            onDeleteItem={handleDeleteItem}
+            onTogglePacked={handleTogglePacked}
+            onClearList={handleClearList}
+          />
+          <Stats items={items} />
+        </>
+      )}
     </div>
   );
 }
