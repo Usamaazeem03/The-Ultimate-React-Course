@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./components/Logo";
 import Form from "./components/Form";
 import PackingList from "./components/PackingList";
 import Stats from "./components/Stats";
 import Auth from "./components/Auth";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./config/firebase";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -30,10 +32,17 @@ function App() {
     );
     if (confirm) setItems([]);
   }
-  const User = null; //TODO: replace with real user authentication logic
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
   return (
     <div className="app">
-      {!User ? (
+      {!user ? (
         /* Show login/signup form */
         <Auth />
       ) : (

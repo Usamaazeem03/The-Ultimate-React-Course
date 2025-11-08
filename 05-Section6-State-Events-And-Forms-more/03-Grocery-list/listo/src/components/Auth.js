@@ -1,17 +1,43 @@
 import { useState } from "react";
 import { auth } from "../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signOut,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 export default function Auth() {
-  const user = auth.currentUser;
-  const handleLogin = async () => {};
-  const handleLogout = async () => {};
-  const handleGoogleLogin = async () => {};
-  const handleEmailAuth = async (e) => {};
   const [isSignup, setIsSignup] = useState(false);
+  // form email/password data
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+
+  const user = auth.currentUser;
+
+  const handleEmailAuth = async (e) => {
+    e.preventDefault();
+
+    try {
+      if (isSignup) {
+        await createUserWithEmailAndPassword(auth, email, password);
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+      }
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  const handleGoogleLogin = async () => {};
+
   return (
     <div className="auth-container">
       {!user ? (
@@ -24,6 +50,7 @@ export default function Auth() {
               type="email"
               placeholder="Email"
               value={email}
+              // this is controlled element
               onChange={(e) => setEmail(e.target.value)}
               required
             />
@@ -31,6 +58,7 @@ export default function Auth() {
               type="password"
               placeholder="Password"
               value={password}
+              //  // this conrolled elements
               onChange={(e) => setPassword(e.target.value)}
               required
             />
