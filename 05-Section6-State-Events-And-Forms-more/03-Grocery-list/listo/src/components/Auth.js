@@ -2,7 +2,6 @@ import { useState } from "react";
 import { auth } from "../config/firebase";
 import {
   createUserWithEmailAndPassword,
-  signOut,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
@@ -24,13 +23,6 @@ export default function Auth() {
       } else {
         await signInWithEmailAndPassword(auth, email, password);
       }
-    } catch (error) {
-      setError(error.message);
-    }
-  };
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
     } catch (error) {
       setError(error.message);
     }
@@ -96,9 +88,9 @@ export default function Auth() {
               <small>{user.email}</small>
             </div>
           </div>
-          <button className="logout-btn" onClick={handleLogout}>
+          {/* <button className="logout-btn" onClick={handleLogout}>
             Logout
-          </button>
+          </button> */}
         </div>
       )}
     </div>

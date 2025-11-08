@@ -6,6 +6,7 @@ import Stats from "./components/Stats";
 import Auth from "./components/Auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./config/firebase";
+import { signOut } from "firebase/auth";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -40,6 +41,16 @@ function App() {
     });
     return () => unsubscribe();
   }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      console.log("User logged out successfully");
+      // optionally, update state or redirect
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
   return (
     <div className="app">
       {!user ? (
@@ -47,7 +58,7 @@ function App() {
         <Auth />
       ) : (
         <>
-          <Logo />
+          <Logo onLogout={handleLogout} />
           <Form onAddItem={handleAddItem} />
           <PackingList
             items={items}
