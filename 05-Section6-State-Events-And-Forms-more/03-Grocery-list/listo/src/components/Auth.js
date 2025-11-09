@@ -3,6 +3,7 @@ import { auth } from "../config/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 
 export default function Auth() {
@@ -29,6 +30,20 @@ export default function Auth() {
   };
 
   const handleGoogleLogin = async () => {};
+
+  const handlePasswordReset = async () => {
+    try {
+      if (!email) {
+        setError("Please enter your email for password reset");
+        return;
+      }
+      await sendPasswordResetEmail(auth, email.trim());
+      setError(null);
+      alert("Password reset email sent! Check your inbox.(Spam too!)");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
   return (
     <div className="auth-container">
@@ -58,6 +73,18 @@ export default function Auth() {
             <button type="submit" className="email-btn">
               {isSignup ? "Sign Up" : "Login"}
             </button>
+            <p className="forgot-password">
+              <span
+                onClick={handlePasswordReset}
+                style={{
+                  cursor: "pointer",
+                  textDecoration: "underline",
+                  color: "blue",
+                }}
+              >
+                Forgot Password?
+              </span>
+            </p>
           </form>
 
           <p className="toggle-auth">
