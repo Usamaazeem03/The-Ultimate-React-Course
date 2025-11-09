@@ -4,13 +4,12 @@ import Form from "./components/Form";
 import PackingList from "./components/PackingList";
 import Stats from "./components/Stats";
 import Auth from "./components/Auth";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./config/firebase";
-import { signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "./config/firebase";
 
 function App() {
   const [items, setItems] = useState([]);
-  //you also use this deveing state for the stats component but its not look good
+  const [user, setUser] = useState(null);
 
   function handleAddItem(item) {
     setItems((items) => [...items, item]);
@@ -27,13 +26,13 @@ function App() {
       )
     );
   }
+
   function handleClearList() {
     const confirm = window.confirm(
       "⚠️ Are you sure you want to clear the list?"
     );
     if (confirm) setItems([]);
   }
-  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -42,23 +41,33 @@ function App() {
     return () => unsubscribe();
   }, []);
 
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const signedInUser = result.user;
+      setUser(signedInUser);
+    } catch (error) {
+      console.error("Error during Google login:", error.code, error.message);
+    }
+  };
+
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      console.log("User logged out successfully");
-      // optionally, update state or redirect
+      setUser(null);
     } catch (error) {
       console.error("Error logging out:", error);
     }
   };
+
   return (
     <div className="app">
       {!user ? (
         /* Show login/signup form */
-        <Auth />
+        <Auth onGoogleLogin={handleGoogleLogin} />
       ) : (
         <>
-          <Logo onLogout={handleLogout} />
+          <Logo onLogout={handleLogout} user={user} />
           <Form onAddItem={handleAddItem} />
           <PackingList
             items={items}
@@ -72,4 +81,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

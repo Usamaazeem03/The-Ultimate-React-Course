@@ -6,14 +6,12 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 
-export default function Auth() {
+export default function Auth({ onGoogleLogin }) {
   const [isSignup, setIsSignup] = useState(false);
   // form email/password data
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-
-  const user = auth.currentUser;
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
@@ -28,8 +26,6 @@ export default function Auth() {
       setError(error.message);
     }
   };
-
-  const handleGoogleLogin = async () => {};
 
   const handlePasswordReset = async () => {
     try {
@@ -47,7 +43,7 @@ export default function Auth() {
 
   return (
     <div className="auth-container">
-      {!user ? (
+      {
         <div className="auth-card">
           <h2>Welcome to Listo 🛍️</h2>
           <p>{isSignup ? "Create your account" : "Sign in to continue"}</p>
@@ -96,7 +92,7 @@ export default function Auth() {
 
           <div className="divider">or</div>
 
-          <button className="google-btn" onClick={handleGoogleLogin}>
+          <button className="google-btn" onClick={onGoogleLogin}>
             <img
               src="https://www.svgrepo.com/show/475656/google-color.svg"
               alt="Google"
@@ -104,22 +100,7 @@ export default function Auth() {
             Sign in with Google
           </button>
         </div>
-      ) : (
-        <div className="auth-logged">
-          <div className="user-info">
-            <img src={user.photoURL || "/user-icon.png"} alt="user" />
-            <div>
-              <p>
-                Hello, <strong>{user.displayName || user.email}</strong>
-              </p>
-              <small>{user.email}</small>
-            </div>
-          </div>
-          {/* <button className="logout-btn" onClick={handleLogout}>
-            Logout
-          </button> */}
-        </div>
-      )}
+      }
     </div>
   );
 }
