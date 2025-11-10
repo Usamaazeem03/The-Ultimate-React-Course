@@ -1,4 +1,0 @@
-Why Do Front End Frameworks Exist?
-_Keeping a user interface in sync with data is really hard a lot of work.
-_They enforce a correct way of structuring and writhing code.
-_Thay give developers and thems a consistent way of building app.
