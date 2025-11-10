@@ -17,7 +17,8 @@ export default function Stats({ items }) {
     );
   }
   const numItems = items.length;
-  const numPackedItems = items.filter((item) => item.packed).length;
+  // coerce packed to boolean (handles undefined/null from Firestore)
+  const numPackedItems = items.filter((item) => !!item.packed).length;
   const percentPacked =
     numItems === 0 ? 0 : Math.round((numPackedItems / numItems) * 100);
 
