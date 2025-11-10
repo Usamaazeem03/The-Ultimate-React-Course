@@ -76,8 +76,8 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 01-Build-a-steps-Component/
 │ ├── └── mini-project → not live
 │ ├── 02-What-is-State.txt
-│ ├── 03-Travel-list/
-│ ├── └── mini-project →
+│ ├── 03-Listo/
+│ ├── └── mini-project → https://listo-b97ed.firebaseapp.com/
 │ └── 04-state-vs-props.txt
 │
 ├── 06-Section7-Thinking-in-React-Sate-Mangement/
@@ -102,7 +102,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 5:** State Management, Controlled Components, Lifting Up State, Child to parent communiction, Derived State, [Mini Project](./05-Section6-State-Events-And-Forms-more/03-Grocery-list/listo/README.md) Not dully complete,✅
 
-- **Week 6:** Firebase,
+- **Week 6:** Firebase [(Authentication(emaill-password-or-google)), (Database(CRUD operations)), (Hosting(with ++ bugs))],✅
 
 ---
 
