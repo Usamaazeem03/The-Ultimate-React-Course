@@ -13,8 +13,41 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const googleProvider = new GoogleAuthProvider();
-export const db = getFirestore(app);
+// Validate required config values. CRA injects REACT_APP_* at build time.
+const requiredKeys = [
+  "REACT_APP_FIREBASE_API_KEY",
+  "REACT_APP_FIREBASE_AUTH_DOMAIN",
+  "REACT_APP_FIREBASE_PROJECT_ID",
+  "REACT_APP_FIREBASE_APP_ID",
+];
+
+const missing = requiredKeys.filter((k) => !process.env[k]);
+
+let appInitialized = null;
+let authInstance = null;
+let googleProviderInstance = null;
+let dbInstance = null;
+let firebaseConfiguredFlag = false;
+
+if (missing.length > 0) {
+  // Do NOT call initializeApp with missing values — Firebase will throw.
+  // Log an explicit message to help debugging in the console.
+  // eslint-disable-next-line no-console
+  console.error(
+    `Firebase config missing values: ${missing.join(", ")}. ` +
+      "Create a .env (or .env.production) with the REACT_APP_FIREBASE_* values and rebuild before deploying."
+  );
+} else {
+  // Initialize Firebase normally
+  appInitialized = initializeApp(firebaseConfig);
+  authInstance = getAuth(appInitialized);
+  googleProviderInstance = new GoogleAuthProvider();
+  dbInstance = getFirestore(appInitialized);
+  firebaseConfiguredFlag = true;
+}
+
+export const app = appInitialized;
+export const auth = authInstance;
+export const googleProvider = googleProviderInstance;
+export const db = dbInstance;
+export const firebaseConfigured = firebaseConfiguredFlag;
