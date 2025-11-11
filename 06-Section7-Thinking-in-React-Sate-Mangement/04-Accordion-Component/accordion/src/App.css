@@ -1,0 +1,145 @@
+/* 🌎 Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Poppins", sans-serif;
+  background: radial-gradient(circle at 20% 20%, #0f172a, #020617);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e2e8f0;
+  padding: 40px;
+}
+
+/* ⚡ Smooth motion for everything */
+:root {
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.6);
+  --transition: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 🧊 Accordion Container */
+.accordion {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4),
+    inset 0 0 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px) saturate(140%);
+  overflow: hidden;
+  animation: fadeIn 0.7s var(--transition);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.accordion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+    inset 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* 💎 Accordion Item */
+.accordion-item {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.4s var(--transition);
+  cursor: pointer;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-item:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* ✨ Title Area */
+.accordion-item .text {
+  padding: 22px 60px 22px 75px;
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: #f8fafc;
+  letter-spacing: 0.3px;
+  transition: color 0.3s var(--transition);
+}
+
+.accordion-item:hover .text {
+  color: var(--accent);
+}
+
+/* 🔹 Number Badge */
+.accordion-item .number {
+  position: absolute;
+  left: 22px;
+  top: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 10px;
+  padding: 4px 9px;
+  backdrop-filter: blur(5px);
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* ➕ Icon */
+.accordion-item .icon {
+  position: absolute;
+  right: 25px;
+  top: 22px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: transform 0.5s var(--transition), color 0.3s ease;
+}
+
+.accordion-item:hover .icon {
+  color: #67e8f9;
+}
+
+.accordion-item.open .icon {
+  transform: rotate(180deg);
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* 📖 Content Box */
+.content-box {
+  overflow: hidden;
+  /* opacity: 0; */
+  transform: translateY(-6px);
+  padding: 0 75px;
+  color: #cbd5e1;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  /* max-height: 0; */
+  transition: max-height 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), padding 0.4s ease;
+}
+
+.accordion-item.open .content-box {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 500px; /* large enough for longest text */
+  padding: 15px 75px 25px 75px;
+}
+
+/* 🌈 Soft Entry Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

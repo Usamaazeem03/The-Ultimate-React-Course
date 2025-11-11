@@ -85,6 +85,8 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 01-Thinking-in-React.txt
 │ ├── 02-State-Management.txt
 │ ├── 03-Deriving-State.txt
+│ ├── 04-Accordion-Component/
+│ ├── └── mini-project → not live
 │ └──
 │
 └── README.md → You are here!
@@ -102,7 +104,9 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 5:** State Management, Controlled Components, Lifting Up State, Child to parent communiction, Derived State, [Mini Project](./05-Section6-State-Events-And-Forms-more/03-Grocery-list/listo/README.md) Not dully complete,✅
 
-- **Week 6:** Firebase [(Authentication(emaill-password-or-google)), (Database(CRUD operations)), (Hosting(with ++ bugs))],✅
+- **Week 6:** Firebase [(Authentication(emaill-password-or-google)), (Database(CRUD operations)), (Hosting(with ++ bugs))], Derived State,✅
+
+- **Week 7:** State Management, Thinking In React, [Mini Project](./06-Section7-Thinking-in-React-Sate-Mangement/04-Accordion-Component/accordion/README.md)
 
 ---
 
