@@ -1,4 +1,4 @@
-# 🧠 **React Concepts You Used**
+# 🧠 **React Concepts I Used**
 
 1. **State Management (`useState`)** – to open and close each accordion item.
 2. **Props** – to pass data (`title`, `text`, `num`) from parent to child components.
