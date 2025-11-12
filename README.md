@@ -106,7 +106,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 6:** Firebase [(Authentication(emaill-password-or-google)), (Database(CRUD operations)), (Hosting(with ++ bugs))], Derived State,✅
 
-- **Week 7:** State Management, Thinking In React, [Mini Project](./06-Section7-Thinking-in-React-Sate-Mangement/04-Accordion-Component/accordion/README.md)
+- **Week 7:** State Management, Thinking In React, [Mini Project](./06-Section7-Thinking-in-React-Sate-Mangement/04-Accordion-Component/accordion/README.md), prope.children,
 
 ---
 

@@ -21,6 +21,7 @@ function App() {
     // BAD PRACTICE TO MUTATE STATE DIRECTLY
     // text.name = "Ali";
   }
+
   return (
     <>
       <button className="close" onClick={() => setIsOpen((is) => !is)}>
@@ -34,31 +35,54 @@ function App() {
             <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
 
-          <p className="message">
-            Step {step}:{messages[step - 1]}
-            {/* {text.name} */}
-          </p>
+          {/* <p className="message">
+            <h3>Step {step}</h3>
+            {messages[step - 1]}
+            
+          </p> */}
+          <StepMessage step={step}>{messages[step - 1]}</StepMessage>
 
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              className="btn"
+            <Button
+              textColor={"#fff"}
+              bgColor={"#7950f2"}
+              text={"Previous"}
               onClick={handlePrevious}
             >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              className="btn"
+              👈 Previous
+            </Button>
+            <Button
+              textColor={"#fff"}
+              bgColor={"#7950f2"}
+              text={"Next"}
               onClick={handleNext}
             >
-              Next
-            </button>
+              {" "}
+              Next 👉
+            </Button>
           </div>
         </div>
       )}
     </>
   );
 }
-
+function Button({ textColor, bgColor, children, onClick }) {
+  return (
+    <button
+      style={{ backgroundColor: bgColor, color: textColor }}
+      className="btn"
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+}
+function StepMessage({ step, children }) {
+  return (
+    <div className="message">
+      <h3>Step {step}</h3>
+      {children}
+    </div>
+  );
+}
 export default App;
