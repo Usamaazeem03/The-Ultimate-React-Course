@@ -87,7 +87,11 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 03-Deriving-State.txt
 │ ├── 04-Accordion-Component/
 │ ├── └── mini-project → not live
-│ └──
+│ └── 04-Challenge.js
+│
+├── 07-Section8-Practice-Project/
+│ ├── 00-Overview.txt
+│ └── 01-EAT-'N-SPLIT/
 │
 └── README.md → You are here!
 ```
@@ -106,7 +110,9 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 6:** Firebase [(Authentication(emaill-password-or-google)), (Database(CRUD operations)), (Hosting(with ++ bugs))], Derived State,✅
 
-- **Week 7:** State Management, Thinking In React, [Mini Project](./06-Section7-Thinking-in-React-Sate-Mangement/04-Accordion-Component/accordion/README.md), prope.children,
+- **Week 7:** State Management, Thinking In React, [Mini Project](./06-Section7-Thinking-in-React-Sate-Mangement/04-Accordion-Component/accordion/README.md), prope.children,[Coding Challenge](./06-Section7-Thinking-in-React-Sate-Mangement\04-Accordion-Component\accordion\src\Challenge.js),[Practice Project](./07-Section8-Practice-Project/01-EAT-'N-SPLIT/),✅
+
+- **Week 8:** [Practice Project](./07-Section8-Practice-Project/01-EAT-'N-SPLIT/),
 
 ---
 
