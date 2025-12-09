@@ -1,0 +1,7 @@
+In this section I learn :
+👉 How to think about components
+👉 Composition
+👉 How to split a component
+👉 Building layouts
+
+and build usePopcon app

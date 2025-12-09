@@ -93,6 +93,13 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 00-Overview.txt
 │ └── 01-EAT-'N-SPLIT/ not live
 │
+├── 08-Section9-Self-Learning/
+│ └── my-portfolio → https://usama-react-dev.netlify.app/
+│
+├── 09-Section10-Thinking-in-React
+│ ├── 00-Overview.txt
+│ └── my-portfolio → https://usama-react-dev.netlify.app/
+│
 └── README.md → You are here!
 ```
 
@@ -112,7 +119,11 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 7:** State Management, Thinking In React, [Mini Project](./06-Section7-Thinking-in-React-Sate-Mangement/04-Accordion-Component/accordion/README.md), prope.children,[Coding Challenge](./06-Section7-Thinking-in-React-Sate-Mangement\04-Accordion-Component\accordion\src\Challenge.js),[Practice Project](./07-Section8-Practice-Project/01-eat-n-split/eat-n-split/README.md),✅
 
-- **Week 8:** [Practice Project](./07-Section8-Practice-Project/01-eat-n-split/eat-n-split/README.md),
+- **Week 8:** [Practice Project](./07-Section8-Practice-Project/01-eat-n-split/eat-n-split/README.md),✅
+
+- **Week 9:** After three weeks, my self learning section was completed project 👉 [my-portfolio](https://usama-react-dev.netlify.app/),✅
+
+- **Week 10:**
 
 ---
 

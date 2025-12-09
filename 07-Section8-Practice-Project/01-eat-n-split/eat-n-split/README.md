@@ -56,7 +56,7 @@ This app allows you to:
 </p>
 
 <p align="center">
-  <img src="./public/screenshots/Screenshot-3.png" width="300" />
+  <img src="./public/screenshots/Screenshot-3.png" width="610" />
 </p>
 
 ---
