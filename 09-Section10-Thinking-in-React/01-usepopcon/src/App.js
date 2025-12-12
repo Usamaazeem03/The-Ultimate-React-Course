@@ -50,13 +50,32 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-function NavBar() {
+export default function App() {
+  const [movies, setMovies] = useState(tempMovieData);
+  return (
+    <>
+      <NavBar>
+        <Search />
+        <NumResults movies={movies} />
+      </NavBar>
+
+      <Main>
+        <ListBox>
+          <MovieList movies={movies} />
+        </ListBox>
+
+        <WatchedBox />
+      </Main>
+    </>
+  );
+}
+
+function NavBar({ children }) {
   return (
     <>
       <nav className="nav-bar">
         <Logo />
-        <Search />
-        <NumResults />
+        {children}
       </nav>
     </>
   );
@@ -71,10 +90,10 @@ function NavBar() {
   }
 }
 
-function NumResults() {
+function NumResults({ movies }) {
   return (
     <p className="num-results">
-      Found <strong>{"X"}</strong> results
+      Found <strong>{movies.length}</strong> results
     </p>
   );
 }
@@ -92,20 +111,16 @@ function Search() {
   );
 }
 
-function Main() {
+function Main({ children }) {
   return (
     <>
-      <main className="main">
-        <ListBox />
-        <WatchedBox />
-      </main>
+      <main className="main">{children}</main>
     </>
   );
 }
 
-function ListBox() {
+function ListBox({ children }) {
   const [isOpen1, setIsOpen1] = useState(true);
-  const [movies, setMovies] = useState(tempMovieData);
 
   return (
     <div className="box">
@@ -115,17 +130,19 @@ function ListBox() {
       >
         {isOpen1 ? "–" : "+"}
       </button>
-      {isOpen1 && (
-        <ul className="list">
-          <MovieList movies={movies} />
-        </ul>
-      )}
+      {isOpen1 && children}
     </div>
   );
 }
 
 function MovieList({ movies }) {
-  return movies?.map((movie) => <Movie key={movie.imdbID} movie={movie} />);
+  return (
+    <ul className="list">
+      {movies?.map((movie) => (
+        <Movie key={movie.imdbID} movie={movie} />
+      ))}
+    </ul>
+  );
 }
 
 function Movie({ movie }) {
@@ -225,13 +242,5 @@ function WatchedMovie({ movie }) {
         </p>
       </div>
     </li>
-  );
-}
-export default function App() {
-  return (
-    <>
-      <NavBar />
-      <Main />
-    </>
   );
 }
