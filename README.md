@@ -124,7 +124,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 9:** After three weeks, my self learning section was completed project 👉 [my-portfolio](https://usama-react-dev.netlify.app/),✅
 
-- **Week 10:** Split UI into Component, Understad Component Categories, Prop Drilling, Component Composition,
+- **Week 10:** Split UI into Component, Understad Component Categories, Prop Drilling, Component Composition,Deep understanding Props, Props thinking, PropTypes ✅
 
 ---
 
