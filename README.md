@@ -126,6 +126,8 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 10:** Split UI into Component, Understad Component Categories, Prop Drilling, Component Composition,Deep understanding Props, Props thinking, PropTypes ✅
 
+- **Week 10:** ([CHALLENGE](https://codesandbox.io/p/devbox/react-challenge-text-expander-final-forked-9hlvxh?file=%2Fsrc%2FApp.js&workspaceId=ws_P9LLhQjNh4Ra6oFnrdJkhL))
+
 ---
 
 ## ⚡ Getting Started

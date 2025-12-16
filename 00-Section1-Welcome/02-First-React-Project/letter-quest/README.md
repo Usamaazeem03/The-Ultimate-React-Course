@@ -19,4 +19,4 @@ This app randomly generates the alphabet. It is best for teaching fun way alphab
 
 ### Live Link
 
-[Letter Quest Live](https://letterquest.netlify.app/)
+[Letter Quest Live](c)
