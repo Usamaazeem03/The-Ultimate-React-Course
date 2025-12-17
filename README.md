@@ -96,9 +96,14 @@ I am using this repo as my personal learning log help others + project showcase.
 ├── 08-Section9-Self-Learning/
 │ └── my-portfolio → https://usama-react-dev.netlify.app/
 │
-├── 09-Section10-Thinking-in-React
+├── 09-Section10-Thinking-in-React/
 │ ├── 00-Overview.txt
-│ ├── ---usepopcon/
+│ ├── 01-usepopcon/
+│ └──
+│
+├── 10-Section11-How-React-Works-Behind-The-Scenes/
+│ ├── 00-Overview.txt
+│ ├──
 │ └──
 │
 └── README.md → You are here!
