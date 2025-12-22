@@ -98,13 +98,13 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 09-Section10-Thinking-in-React/
 │ ├── 00-Overview.txt
-│ ├── 01-usepopcon/
-│ └──
+│ └── 01-usepopcon/
 │
 ├── 10-Section11-How-React-Works-Behind-The-Scenes/
 │ ├── 00-Overview.txt
-│ ├──
-│ └──
+│ └── 01-how-react-works/
+│     └── mini-project → not live
+│
 │
 └── README.md → You are here!
 ```
@@ -131,7 +131,9 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 10:** Split UI into Component, Understad Component Categories, Prop Drilling, Component Composition,Deep understanding Props, Props thinking, PropTypes ✅
 
-- **Week 11:** ([CHALLENGE](https://codesandbox.io/p/devbox/react-challenge-text-expander-final-forked-9hlvxh?file=%2Fsrc%2FApp.js&workspaceId=ws_P9LLhQjNh4Ra6oFnrdJkhL))
+- **Week 11:** ([CHALLENGE](https://codesandbox.io/p/devbox/react-challenge-text-expander-final-forked-9hlvxh?file=%2Fsrc%2FApp.js&workspaceId=ws_P9LLhQjNh4Ra6oFnrdJkhL)),Components, Instances, React.Element, Rendering Works, Element-Tree, Fiber , Fiber-Tree, Reconciliation+Diffing,✅
+
+- **Week 12:**
 
 ---
 
