@@ -133,7 +133,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 11:** ([CHALLENGE](https://codesandbox.io/p/devbox/react-challenge-text-expander-final-forked-9hlvxh?file=%2Fsrc%2FApp.js&workspaceId=ws_P9LLhQjNh4Ra6oFnrdJkhL)),Components, Instances, React.Element, Rendering Works, Element-Tree, Fiber , Fiber-Tree, Reconciliation+Diffing,✅
 
-- **Week 12:**
+- **Week 12:** Key-Prop, understand Rules for Render Logic, State Update Batching,
 
 ---
 
