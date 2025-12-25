@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const tempMovieData = [
   {
@@ -50,35 +50,9 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const KEY = "528fe24";
 export default function App() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
-  const [loading, setLoading] = useState(false);
-  const query = "batman";
-
-  useEffect(function () {
-    try {
-      async function fetchMovies() {
-        setLoading(true);
-        const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
-        );
-        const data = await res.json();
-        // fix duplicate movies error
-        const uniqueMovies = data.Search.filter(
-          (movie, index, self) =>
-            index === self.findIndex((m) => m.imdbID === movie.imdbID)
-        );
-
-        setMovies(uniqueMovies);
-        setLoading(false);
-      }
-      fetchMovies();
-    } catch (err) {
-      console.error(err.message);
-    }
-  }, []);
 
   return (
     // Passing Elements as Props
@@ -90,7 +64,9 @@ export default function App() {
       </NavBar>
 
       <Main>
-        <Box>{loading ? <Loading /> : <MovieList movies={movies} />}</Box>
+        <Box>
+          <MovieList movies={movies} />
+        </Box>
 
         <Box>
           <WatchedMoviesSummary watched={watched} />
@@ -98,15 +74,6 @@ export default function App() {
         </Box>
       </Main>
     </>
-  );
-}
-
-function Loading() {
-  return (
-    <div className="loading">
-      <div className="loading-spinner"></div>
-      <p>Loading movies...</p>
-    </div>
   );
 }
 
