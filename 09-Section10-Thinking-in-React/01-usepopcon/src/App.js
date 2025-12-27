@@ -52,45 +52,72 @@ const average = (arr) =>
 
 const KEY = "528fe24";
 export default function App() {
+  const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState(tempWatchedData);
-  const [loading, setLoading] = useState(false);
-  const query = "batman";
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  useEffect(function () {
-    try {
+  useEffect(
+    function () {
+      const controller = new AbortController();
       async function fetchMovies() {
-        setLoading(true);
-        const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
-        );
-        const data = await res.json();
-        // fix duplicate movies error
-        const uniqueMovies = data.Search.filter(
-          (movie, index, self) =>
-            index === self.findIndex((m) => m.imdbID === movie.imdbID)
-        );
+        try {
+          setIsLoading(true);
+          setError("");
+          const res = await fetch(
+            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+            { signal: controller.signal }
+          );
+          if (!res.ok)
+            throw new Error("Something went wrong with fetching movies");
+          // response
+          const data = await res.json();
 
-        setMovies(uniqueMovies);
-        setLoading(false);
+          if (data.Response === "False")
+            throw new Error("Movie not found. Please try another search term.");
+          // fix duplicate movies error
+          const uniqueMovies = data.Search.filter(
+            (movie, index, self) =>
+              index === self.findIndex((m) => m.imdbID === movie.imdbID)
+          );
+
+          setMovies(uniqueMovies);
+        } catch (err) {
+          if (err.name !== "AbortError") {
+            setError(err.message);
+          }
+        } finally {
+          setIsLoading(false);
+        }
+      }
+      if (query.length < 3) {
+        setMovies([]);
+        setError("");
+        return;
       }
       fetchMovies();
-    } catch (err) {
-      console.error(err.message);
-    }
-  }, []);
+      return () => controller.abort();
+    },
+
+    [query]
+  );
 
   return (
     // Passing Elements as Props
     // <Box element={<MovieList movies={movies} />}/>
     <>
       <NavBar>
-        <Search />
+        <Search query={query} setQuery={setQuery} />
         <NumResults movies={movies} />
       </NavBar>
 
       <Main>
-        <Box>{loading ? <Loading /> : <MovieList movies={movies} />}</Box>
+        <Box>
+          {isLoading && <Loading />}
+          {!isLoading && !error && <MovieList movies={movies} />}
+          {error && <ErrorMessage message={error} />}
+        </Box>
 
         <Box>
           <WatchedMoviesSummary watched={watched} />
@@ -106,6 +133,17 @@ function Loading() {
     <div className="loading">
       <div className="loading-spinner"></div>
       <p>Loading movies...</p>
+    </div>
+  );
+}
+
+function ErrorMessage({ message }) {
+  return (
+    <div className="error">
+      <p>
+        <span>🛑</span>
+        {message}
+      </p>
     </div>
   );
 }
@@ -138,8 +176,7 @@ function NumResults({ movies }) {
   );
 }
 
-function Search() {
-  const [query, setQuery] = useState("");
+function Search({ query, setQuery }) {
   return (
     <input
       className="search"
