@@ -105,6 +105,10 @@ I am using this repo as my personal learning log help others + project showcase.
 │ └── 01-how-react-works/
 │     └── mini-project → not live
 │
+├── 11-Section12-Effects-And-Data-Fetching/
+│ ├── 00-Overview.txt
+│ └── /come back/-> 01-usepopcon/
+│
 │
 └── README.md → You are here!
 ```
@@ -133,7 +137,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 11:** ([CHALLENGE](https://codesandbox.io/p/devbox/react-challenge-text-expander-final-forked-9hlvxh?file=%2Fsrc%2FApp.js&workspaceId=ws_P9LLhQjNh4Ra6oFnrdJkhL)),Components, Instances, React.Element, Rendering Works, Element-Tree, Fiber , Fiber-Tree, Reconciliation+Diffing,✅
 
-- **Week 12:** Key-Prop, understand Rules for Render Logic, State Update Batching,
+- **Week 12:** Key-Prop, understand Rules for Render Logic, State Update Batching, Events work in reaat, Libraries vs Frameworks,Component Lifecycle, Fetch data, "💖usaEffect",try to understand data flow in jsx 🤔,✅
 
 ---
 

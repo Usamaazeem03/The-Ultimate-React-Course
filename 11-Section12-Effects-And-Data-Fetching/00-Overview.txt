@@ -1,0 +1,5 @@
+This section i understand:
+👉 Data fetching is essential
+👉 Effects with usaEffect hook
+👉 Effect cleanup
+👉 Real-world application
