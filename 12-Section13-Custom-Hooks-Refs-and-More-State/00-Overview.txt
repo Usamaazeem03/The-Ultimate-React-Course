@@ -1,0 +1,7 @@
+// Custom hooks, refs, and more state
+
+👉 Hooks are easy to learn, hard to master
+👉 Rules of hooks
+👉 Deep dive into useState
+👉 useRef
+👉 Custom hooks

@@ -55,7 +55,7 @@ const KEY = "528fe24";
 export default function App() {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState(tempWatchedData);
+  const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);
@@ -101,7 +101,7 @@ export default function App() {
           );
 
           setMovies(uniqueMovies);
-          console.log(data.Search);
+          setError("");
         } catch (err) {
           if (err.name !== "AbortError") {
             setError(err.message);
@@ -115,6 +115,7 @@ export default function App() {
         setError("");
         return;
       }
+      handleCloseMovie();
       fetchMovies();
       return () => controller.abort();
     },
@@ -334,6 +335,35 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       fetchMovieDetails();
     },
     [selectedId]
+  );
+
+  useEffect(
+    function () {
+      if (!title) return;
+      document.title = `Movie | ${title}`;
+      // cleanup function
+      return function cleanup() {
+        document.title = "usePopcorn";
+      };
+    },
+
+    [title]
+  );
+
+  useEffect(
+    function () {
+      function onKeyDown(e) {
+        if (e.code === "Escape") {
+          onCloseMovie();
+        }
+      }
+      document.addEventListener("keydown", onKeyDown);
+
+      return function () {
+        document.removeEventListener("keydown", onKeyDown);
+      };
+    },
+    [onCloseMovie]
   );
 
   return (
