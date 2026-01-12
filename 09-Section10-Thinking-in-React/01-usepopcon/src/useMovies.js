@@ -4,7 +4,7 @@ export function useMovies(query) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const KEY = process.env.OMDB_KEY;
+  const KEY = process.env.REACT_APP_OMDB_KEY;
 
   useEffect(
     function () {
