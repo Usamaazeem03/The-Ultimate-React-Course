@@ -111,7 +111,7 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 12-Section13-Custom-Hooks-Refs-and-More-State/
 │ ├── 00-Overview.txt
-│ └──
+│ └──/come back/-> 01-usepopcon/
 │
 │
 └── README.md → You are here!
@@ -143,7 +143,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 12:** Key-Prop, understand Rules for Render Logic, State Update Batching, Events work in reaat, Libraries vs Frameworks,Component Lifecycle, Fetch data, "💖usaEffect",try to understand data flow in jsx 🤔,✅
 
-- **Week 13:** Effect:Changing page title, Cleaning Up, Rece Condition, [CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-currency-converter-starter-forked-fgclws)
+- **Week 13:** Effect:Changing page title, Cleaning Up, Rece Condition, [CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-currency-converter-starter-forked-fgclws), Rules of Hooks, useState Summary, useRef, Custom Hooks[CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-usegeolocation-starter-forked-5krjk5?file=%2Fsrc%2FApp.js),[PROJECT usePopcon IS DONE](./09-Section10-Thinking-in-React\01-usepopcon\README.md)
 
 ---
 
