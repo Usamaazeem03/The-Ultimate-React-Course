@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# usePopcorn App 🍿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**A React-based Movie Tracker App with Ratings and Watchlist Management**
 
-## Available Scripts
+![usePopcorn](https://user-images.githubusercontent.com/placeholder/usepopcorn.png)
+_Track your favorite movies, rate them, and maintain your watched list._
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+usePopcorn is a web app built with **React** that allows users to:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Search movies from the **OMDb API**.
+- View detailed movie information.
+- Rate movies using a **custom star rating component**.
+- Add rated movies to a **personal watched list** stored in **local storage**.
+- Track average ratings, runtime, and total movies watched.
 
-### `npm test`
+This project was a complete hands-on exercise in building a **modern React application**, including **custom hooks**, **state management**, **side effects**, and **component composition**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Search Movies:** Type at least 3 characters to search for movies.
+- **Movie Details:** View detailed information including poster, plot, runtime, IMDb rating, actors, director, genre, and release date.
+- **Custom Star Rating:** Rate movies with an interactive star rating component.
+- **Watched List:** Add and remove movies from your watched list.
+- **Local Storage Persistence:** Watched movies and ratings are saved even after browser reloads.
+- **Keyboard Shortcuts:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Press `Enter` to focus on the search input.
+  - Press `Escape` to close movie details modal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Responsive UI:** Designed with reusable **Box** components for collapsible sections.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React (useState, useEffect, useRef)**
+- **Custom Hooks** (`useMovies`, `useLocalStorage`, `useKey`)
+- **JavaScript ES6+**
+- **OMDb API** for movie data
+- **CSS / Flexbox** for layout and styling
+- **PropTypes** for component prop validation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Concepts Learned
 
-## Learn More
+This project was a **deep dive into modern React development**, and I learned:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Component Composition** – Breaking the app into reusable, modular components like `NavBar`, `Box`, `MovieList`, and `WatchedMoviesSummary`.
+2. **Custom Hooks** – Building `useMovies` for fetching data, `useLocalStorage` for state persistence, and `useKey` for keyboard interactions.
+3. **State Management** – Using `useState` for local state and handling updates based on user actions.
+4. **Side Effects with useEffect** – Fetching data from APIs, updating the document title, and cleaning up effects.
+5. **Refs and DOM Manipulation** – Using `useRef` to focus on input elements programmatically.
+6. **Conditional Rendering** – Displaying loading spinners, errors, and dynamic components based on state.
+7. **Array and Object Manipulation** – Filtering duplicates, calculating averages, and managing arrays of movies.
+8. **Keyboard Interactions** – Implementing key listeners with reusable hooks.
+9. **Persistent State** – Using `localStorage` to save watched movies across sessions.
+10. **Component Communication** – Passing props, handling callbacks, and lifting state up.
+11. **Clean Code Practices** – Meaningful naming, separating concerns, and reusable functions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project reinforced the **importance of structured, modular React code** and handling asynchronous data flows correctly.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Setup & Installation
 
-### Analyzing the Bundle Size
+1. **Clone the repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+git clone https://github.com/Usamaazeem03/The-Ultimate-React-Course
+cd The-Ultimate-React-Course\09-Section10-Thinking-in-React\01-usepopcon
+```
 
-### Making a Progressive Web App
+2. **Install dependencies**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+```
 
-### Advanced Configuration
+3. **Start the development server**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm start
+```
 
-### Deployment
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> Make sure to replace the API key in `useMovies.js` and `App.js` with your own OMDb API key if needed.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Usage
+
+- Type a movie name in the search bar (minimum 3 characters).
+- Click on a movie to view details.
+- Rate the movie using the star rating component.
+- Click **Add to List** to save it to your watched movies.
+- Review your watched movies summary with average ratings and runtime.
+- Delete movies from your watched list using the **X** button.
+
+---
+
+## Acknowledgements
+
+- OMDb API for movie data
+- React documentation and tutorials for hooks and component patterns
+
+---

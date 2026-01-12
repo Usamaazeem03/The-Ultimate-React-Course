@@ -4,7 +4,7 @@ export function useMovies(query) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const KEY = "528fe24";
+  const KEY = process.env.OMDB_KEY;
 
   useEffect(
     function () {
@@ -14,7 +14,7 @@ export function useMovies(query) {
           setIsLoading(true);
           setError("");
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal }
           );
           if (!res.ok)
