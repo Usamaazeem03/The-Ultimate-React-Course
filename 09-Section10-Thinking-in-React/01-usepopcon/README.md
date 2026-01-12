@@ -2,7 +2,7 @@
 
 **A React-based Movie Tracker App with Ratings and Watchlist Management**
 
-![usePopcorn](https://user-images.githubusercontent.com/placeholder/usepopcorn.png)
+![usePopcorn](usepopcorn.png)
 _Track your favorite movies, rate them, and maintain your watched list._
 
 ---
@@ -112,3 +112,7 @@ npm start
 - React documentation and tutorials for hooks and component patterns
 
 ---
+
+## [🌐 Live Demo](https://usepopcorn-4ev1ojv98-usamas-projects-bb8d425c.vercel.app/)
+
+Track your favorite movies, rate them, and maintain your watched list.
