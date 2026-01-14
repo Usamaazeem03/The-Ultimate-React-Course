@@ -1,0 +1,4 @@
+// React Before hooks: Class Based React:
+👉 We used to write components as classes...
+👉 understanding old codebases
+>> Bild Weather app use class components

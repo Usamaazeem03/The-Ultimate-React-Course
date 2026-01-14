@@ -2,7 +2,7 @@
 
 **A React-based Movie Tracker App with Ratings and Watchlist Management**
 
-![usePopcorn](usepopcorn.png)
+![usePopcorn](./public/usepopcorn.png)
 _Track your favorite movies, rate them, and maintain your watched list._
 
 ---

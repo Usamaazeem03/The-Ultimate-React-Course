@@ -113,6 +113,11 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 00-Overview.txt
 │ └──/come back/-> 01-usepopcon/
 │
+├── 13-Section14-React-Before-Hooks-Class-Component/
+│ ├── 00-Overview.txt
+│ ├── 00-Overview.txt
+│ └── 01-classy-weather
+│
 │
 └── README.md → You are here!
 ```
@@ -146,6 +151,8 @@ I am using this repo as my personal learning log help others + project showcase.
 - **Week 13:** Effect:Changing page title, Cleaning Up, Rece Condition, [CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-currency-converter-starter-forked-fgclws), Rules of Hooks, useState Summary, useRef, Custom Hooks[CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-usegeolocation-starter-forked-5krjk5?file=%2Fsrc%2FApp.js),[PROJECT usePopcon IS DONE](./09-Section10-Thinking-in-React/01-usepopcon/README.md)✅
 
 - **Week 14:** Custom Hooks[CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-usegeolocation-starter-forked-5krjk5?file=%2Fsrc%2FApp.js),[PROJECT usePopcon IS DONE](./09-Section10-Thinking-in-React/01-usepopcon/README.md)✅
+
+- **Week 15:**
 
 ---
 
