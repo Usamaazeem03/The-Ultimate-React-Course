@@ -115,7 +115,6 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 13-Section14-React-Before-Hooks-Class-Component/
 │ ├── 00-Overview.txt
-│ ├── 00-Overview.txt
 │ └── 01-classy-weather
 │
 │
@@ -152,7 +151,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 14:** Custom Hooks[CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-usegeolocation-starter-forked-5krjk5?file=%2Fsrc%2FApp.js),[PROJECT usePopcon IS DONE](./09-Section10-Thinking-in-React/01-usepopcon/README.md)✅
 
-- **Week 15:**
+- **Week 15:** Understand Old React Code, First Class Component, Event in "CC", Class Components vs Function Components, Fetching Data in "CC", Child to Parennt Communication, Lifecycle Mothods,
 
 ---
 
