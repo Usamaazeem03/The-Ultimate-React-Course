@@ -1,0 +1,4 @@
+// Advanced useReduce Hook
+👉 Another Powerful way of manging state
+👉 Understand to Redux
+👉 Half the section in essentially another practice project
