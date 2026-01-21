@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2rem;
+  min-height: 100vh;
+  color: #222;
+  background: linear-gradient(135deg, #f3d1cc, #eabfb9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* APP */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 120rem;
+  gap: 4rem;
+  padding: 5rem 4rem;
+  border: 2px solid #222;
+  outline: 2px solid #222;
+  outline-offset: 1rem;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* TITLES */
+h1 {
+  font-weight: 400;
+  font-size: 5.2rem;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+/* INPUT */
+input {
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  background-color: #f0d2ce;
+  padding: 1.4rem 2.4rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 32rem;
+  max-width: 100%;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #222;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+/* WEATHER LIST */
+.weather {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* DAY CARD */
+.day {
+  background-color: #f0d2ce;
+  padding: 1.8rem 0 2.2rem;
+  width: 13rem;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.day:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.day span {
+  font-size: 4.8rem;
+}
+
+.day.important {
+  background-color: #ecc5c0;
+  outline: 2px solid #222;
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* LOADER */
+.loader {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+/*  BUTTON */
+.btn {
+  background-color: #f0d2ce;
+  color: #222;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1.6rem 3rem;
+  border: 2px solid #222;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background-color: #ecc5c0;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* ===== RESPONSIVE ===== */
+/* RESPONSIVE BUTTON */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.2rem 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+}
+
+/* Tablet (iPad) */
+@media (max-width: 1024px) {
+  html {
+    font-size: 56%;
+  }
+
+  .app {
+    width: 90%;
+    padding: 4rem 3rem;
+    gap: 3rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .day {
+    width: 11.5rem;
+    padding: 1.6rem 0 2rem;
+  }
+
+  .day span {
+    font-size: 4.4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .app {
+    width: 95%;
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+  .weather {
+    gap: 1.8rem;
+  }
+
+  .day {
+    width: 10.5rem;
+    padding: 1.4rem 0 1.8rem;
+  }
+
+  .day span {
+    font-size: 4rem;
+  }
+
+  .loader {
+    font-size: 2rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  h1 {
+    font-size: 3.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .day {
+    width: 9rem;
+    padding: 1.2rem 0 1.6rem;
+  }
+
+  .day span {
+    font-size: 3.4rem;
+  }
+}
