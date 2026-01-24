@@ -119,8 +119,8 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 14-Section16-The-Advanced-useReducer-Hook/
 │ ├── 00-Overview.txt
-│ ├── 01-react-quiz
-│ └──
+│ └── 01-react-quiz → not live
+│
 │
 │
 └── README.md → You are here!
@@ -158,7 +158,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 15:** Understand Old React Code, First Class Component, Event in "CC", Class Components vs Function Components, Fetching Data in "CC", Child to Parennt Communication, Lifecycle Mothods,[Classy Weather](./13-Section14-React-Before-Hooks-Class-Component/01-classy-weather/README.md)☑️, useReducer
 
-- **Week 16:** useReducer, Fake API, [React Quiz](./14-Section16-The-Advanced-useReducer-Hook/01-react-quiz/README.md),
+- **Week 16:** useReducer, Fake API, [React Quiz](./14-Section16-The-Advanced-useReducer-Hook/01-react-quiz/README.md),[CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-usereducer-bank-starter-forked-vfjgg7),
 
 ---
 
