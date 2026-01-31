@@ -1,0 +1,141 @@
+/* External styles */
+@import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap";
+
+/* ================================
+   DESIGN SYSTEM — GLOBAL TOKENS
+================================ */
+:root {
+  /* Brand */
+  --brand-primary: #00c46a;
+  --brand-secondary: #ffb545;
+
+  /* Neutrals */
+  --gray-900: #0f172a;
+  --gray-800: #1e293b;
+  --gray-700: #334155;
+  --gray-600: #475569;
+  --gray-500: #64748b;
+  --gray-400: #94a3b8;
+  --gray-300: #cbd5e1;
+  --gray-200: #e2e8f0;
+  --gray-100: #f1f5f9;
+  --gray-50: #f8fafc;
+
+  /* Surfaces */
+  --surface-base: #ffffff;
+  --surface-muted: var(--gray-50);
+  --surface-elevated: #ffffff;
+
+  /* Text */
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-muted: var(--gray-400);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Shadow */
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 12px 32px rgba(15, 23, 42, 0.08);
+
+  /* Spacing scale (8px system) */
+  --space-1: 0.8rem;
+  --space-2: 1.6rem;
+  --space-3: 2.4rem;
+  --space-4: 3.2rem;
+  --space-5: 4.8rem;
+}
+
+/* ================================
+   RESET & BASE
+================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: var(--surface-muted);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+/* ================================
+   FORM ELEMENTS
+================================ */
+input,
+textarea {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-200);
+  background-color: var(--surface-base);
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(0, 196, 106, 0.15);
+}
+
+/* ================================
+   PRIMARY BUTTON / CTA
+================================ */
+.cta:link,
+.cta:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  transform: skew(10deg);
+  padding: 1.4rem 3.6rem;
+
+  background: linear-gradient(135deg, #00c46a, #16a34a);
+
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.cta {
+  display: inline-block;
+  transform: skew(10deg);
+  width: fit-content;
+}

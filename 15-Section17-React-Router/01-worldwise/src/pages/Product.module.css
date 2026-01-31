@@ -1,0 +1,61 @@
+.product {
+  padding: 4rem 6rem 7rem; /* less padding at top (nav space) */
+  min-height: calc(100vh);
+
+  background: linear-gradient(135deg, #1b1e21 0%, #242a2e 45%, #2d3439 100%);
+
+  color: #e5e7eb;
+  font-family: "Manrope", sans-serif;
+}
+
+/* layout */
+.product section {
+  max-width: 96rem;
+  margin: 6rem auto 0; /* pushes content down, not nav */
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 7rem;
+  align-items: center;
+}
+
+/* content column */
+.product section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+/* heading */
+.product h2 {
+  font-size: clamp(3.6rem, 5vw, 5.2rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* body text */
+.product p {
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 46ch;
+}
+
+/* product image (scoped properly) */
+.product section img {
+  width: 100%;
+  border-radius: 1.4rem;
+
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+
+  transform: translateY(0);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.product section img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.55);
+}
