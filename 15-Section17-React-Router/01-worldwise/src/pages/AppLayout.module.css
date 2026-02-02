@@ -1,7 +1,40 @@
 .app {
-  height: 100vh;
-  padding: 2.4rem;
-  overscroll-behavior-y: none;
   display: flex;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #1b1e21 0%, #242a2e 50%, #2d3439 100%);
+  overflow: hidden;
+}
+
+.sidebarWrapper {
+  display: flex;
+  /* flex-direction: column; */
+  background-color: #242a2e;
+  height: 100%;
   position: relative;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.resizer {
+  width: 6px;
+  cursor: col-resize;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.2s;
+}
+
+.resizer:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.mapWrapper {
+  flex: 1; /* takes remaining space */
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background-color: #1f2225;
 }

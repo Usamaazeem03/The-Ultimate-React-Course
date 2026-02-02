@@ -123,7 +123,7 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 15-Section17-React-Router/
 │ ├── 00-Overview.txt
-│ └──
+│ └── 01-worldwise
 │
 │
 └── README.md → You are here!
@@ -163,7 +163,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 16:** useReducer, Fake API, [React Quiz](./14-Section16-The-Advanced-useReducer-Hook/01-react-quiz/README.md),[CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-usereducer-bank-starter-forked-vfjgg7) ✅
 
-- **Week 17:**
+- **Week 17:** React Routing, CSS Modules, Nested Routes, Index Routes ✅
 
 ---
 

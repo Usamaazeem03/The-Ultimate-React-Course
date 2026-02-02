@@ -1,28 +1,50 @@
 .nav {
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
 }
 
+/* container */
 .nav ul {
   list-style: none;
   display: flex;
-  background-color: var(--color-dark--2);
-  border-radius: 7px;
+  gap: 0.6rem;
+
+  padding: 0.6rem;
+  border-radius: 1.2rem;
+
+  background: rgba(45, 52, 57, 0.65);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* IMPORTANT PART */
+.nav li {
+  flex: 1; /* equal width */
 }
 
 .nav a:link,
 .nav a:visited {
-  display: block;
-  color: inherit;
+  display: flex;
+  justify-content: center; /* center text */
+  align-items: center;
+
+  width: 100%; /* fill li */
+  padding: 0.8rem 0; /* vertical only */
+
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  padding: 0.5rem 2rem;
-  border-radius: 5px;
+  border-radius: 0.9rem;
+
+  color: #cbd5e1;
+  transition: all 0.2s ease;
 }
 
 /* CSS Modules feature */
 .nav a:global(.active) {
-  background-color: var(--color-dark--0);
+  background-color: #1abc9c;
+  color: #1b1e21;
+  box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4);
 }

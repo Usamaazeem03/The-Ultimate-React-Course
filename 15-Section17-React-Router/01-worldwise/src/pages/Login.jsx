@@ -1,6 +1,7 @@
 import styles from "./Login.module.css";
 import { useState } from "react";
 import PageNav from "../components/PageNav";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("jack@example.com");
@@ -31,11 +32,11 @@ export default function Login() {
           />
         </div>
 
-        <div>
+        <Link to="/app">
           <button type="submit" className={styles.ctaLink}>
             Login
           </button>
-        </div>
+        </Link>
       </form>
     </main>
   );
