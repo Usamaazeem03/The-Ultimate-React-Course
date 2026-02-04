@@ -4,7 +4,7 @@ import Map from "../components/Map";
 import styles from "./AppLayout.module.css";
 
 function AppLayout() {
-  const [sidebarWidth, setSidebarWidth] = useState(400);
+  const [sidebarWidth, setSidebarWidth] = useState(450);
   const isResizing = useRef(false);
 
   function handleMouseDown(e) {

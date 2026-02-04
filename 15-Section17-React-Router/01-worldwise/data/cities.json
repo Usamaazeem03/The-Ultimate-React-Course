@@ -25,16 +25,28 @@
       "id": 17806751
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Karachi",
+      "country": "Pakistan",
+      "emoji": "🇵🇰",
+      "date": "2027-05-20T10:15:30.000Z",
+      "notes": "A city rich in history and culture.",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": 52.520008,
+        "lng": 13.404954
       },
-      "id": 98443197
+      "id": 34567890
+    },
+    {
+      "cityName": "Islamabad",
+      "country": "Pakistan",
+      "emoji": "🇵🇰",
+      "date": "2027-05-20T10:15:30.000Z",
+      "notes": "A city rich in history and culture.",
+      "position": {
+        "lat": 52.520008,
+        "lng": 13.404954
+      },
+      "id": 34567890
     }
   ]
 }
