@@ -125,6 +125,9 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 00-Overview.txt
 │ └── 01-worldwise
 │
+├── 16-Section18-Advanced-State-Management-The-Context-API/
+│ ├── 00-Overview.txt
+│ └── 01-atomic-blog → (understand codebase)
 │
 └── README.md → You are here!
 ```
@@ -163,9 +166,9 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 16:** useReducer, Fake API, [React Quiz](./14-Section16-The-Advanced-useReducer-Hook/01-react-quiz/README.md),[CHALLENGE](https://codesandbox.io/p/sandbox/react-challenge-usereducer-bank-starter-forked-vfjgg7) ✅
 
-- **Week 17:** React Routing, CSS Modules, Nested Routes, Index Routes ✅
+- **Week 17:** React Routing, CSS Modules, Nested Routes, Index Routes ✅ [worldwise](./15-Section17-React-Router/01-worldwise/README.md)➰
 
-- **Week 18:** useParams, useSearchParams, useNavigate
+- **Week 18:** useParams, useSearchParams, useNavigate, [worldwise](./15-Section17-React-Router/01-worldwise/README.md)➰, understanding codebase, Context API, useContext Hook, Advance Patten Context API,✅
 
 ---
 
