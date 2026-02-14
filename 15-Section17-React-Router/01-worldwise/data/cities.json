@@ -23,30 +23,6 @@
         "lng": -3.7133789062500004
       },
       "id": 17806751
-    },
-    {
-      "cityName": "Karachi",
-      "country": "Pakistan",
-      "emoji": "🇵🇰",
-      "date": "2027-05-20T10:15:30.000Z",
-      "notes": "A city rich in history and culture.",
-      "position": {
-        "lat": 52.520008,
-        "lng": 13.404954
-      },
-      "id": 34567890
-    },
-    {
-      "cityName": "Islamabad",
-      "country": "Pakistan",
-      "emoji": "🇵🇰",
-      "date": "2027-05-20T10:15:30.000Z",
-      "notes": "A city rich in history and culture.",
-      "position": {
-        "lat": 52.520008,
-        "lng": 13.404954
-      },
-      "id": 34567890
     }
   ]
 }

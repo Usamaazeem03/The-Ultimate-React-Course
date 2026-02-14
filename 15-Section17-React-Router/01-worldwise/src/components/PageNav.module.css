@@ -44,13 +44,14 @@
   text-transform: uppercase;
 
   /* Glass effect */
-  background: rgba(53, 114, 78, 0.236); /* semi-transparent */
-  backdrop-filter: blur(10px) saturate(180%);
+  background: rgba(0, 208, 132, 0.12); /* semi-transparent */
+  backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
-  border: 1px solid rgba(0, 255, 110, 0.811);
+  border: 1px solid rgba(0, 208, 132, 0.5);
 
   width: fit-content;
   transition: all 0.25s ease;
 
   color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(0, 208, 132, 0.2);
 }
