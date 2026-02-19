@@ -32,8 +32,30 @@ function CitiesProvider({ children }) {
       console.error("Error fetching city:", error);
     }
   }
+
+  async function creatCity(newCity) {
+    setIsLoading(true);
+    try {
+      const response = await fetch(`http://localhost:8000/cities`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newCity),
+      });
+
+      const data = await response.json();
+      setCities((cities) => [...cities, data]);
+    } catch (error) {
+      console.error("Error post city:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
   return (
-    <CitiesContext.Provider value={{ cities, isLoading, currentCity, getCity }}>
+    <CitiesContext.Provider
+      value={{ cities, isLoading, currentCity, getCity, creatCity }}
+    >
       {children}
     </CitiesContext.Provider>
   );
