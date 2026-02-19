@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -23,18 +11,6 @@
         "lng": -3.7133789062500004
       },
       "id": "17806751"
-    },
-    {
-      "id": "3253",
-      "cityName": "Bandon",
-      "country": "Ireland",
-      "emoji": "🇮🇪",
-      "date": "2026-02-18T15:34:50.384Z",
-      "notes": "",
-      "position": {
-        "lat": 51.75518257277441,
-        "lng": -8.635253906250002
-      }
     },
     {
       "id": "60e6",
@@ -49,111 +25,15 @@
       }
     },
     {
-      "id": "1ee3",
-      "cityName": "Bandon",
-      "country": "Ireland",
-      "emoji": "🇮🇪",
-      "date": "2026-02-18T15:34:50.384Z",
+      "id": "15d4",
+      "cityName": "Anaconda",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2026-02-19T16:47:08.645Z",
       "notes": "",
       "position": {
-        "lat": 51.75518257277441,
-        "lng": -8.635253906250002
-      }
-    },
-    {
-      "id": "4a51",
-      "cityName": "London",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "🇬🇧",
-      "date": "2026-02-18T15:35:09.166Z",
-      "notes": "",
-      "position": {
-        "lat": 51.38692032395582,
-        "lng": 0.0439453125
-      }
-    },
-    {
-      "id": "9912",
-      "cityName": "Floreffe",
-      "country": "Belgium",
-      "emoji": "🇧🇪",
-      "date": "2026-02-18T15:42:07.767Z",
-      "notes": "",
-      "position": {
-        "lat": 50.40343656068069,
-        "lng": 4.812011718750001
-      }
-    },
-    {
-      "id": "b7a3",
-      "cityName": "Karachi",
-      "country": "Pakistan",
-      "emoji": "🇵🇰",
-      "date": "2026-02-18T15:42:35.802Z",
-      "notes": "",
-      "position": {
-        "lat": 24.827736020153736,
-        "lng": 67.15942382812501
-      }
-    },
-    {
-      "id": "f197",
-      "cityName": "Roscommon",
-      "country": "Ireland",
-      "emoji": "🇮🇪",
-      "date": "2026-02-19T16:12:03.379Z",
-      "notes": "",
-      "position": {
-        "lat": 53.759556013951915,
-        "lng": -8.349609375000002
-      }
-    },
-    {
-      "id": "2387",
-      "cityName": "Roscommon",
-      "country": "Ireland",
-      "emoji": "🇮🇪",
-      "date": "2026-02-19T16:12:03.379Z",
-      "notes": "",
-      "position": {
-        "lat": 53.759556013951915,
-        "lng": -8.349609375000002
-      }
-    },
-    {
-      "id": "2ccf",
-      "cityName": "Jersey",
-      "country": "Jersey",
-      "emoji": "🇯🇪",
-      "date": "2026-02-19T16:12:25.686Z",
-      "notes": "",
-      "position": {
-        "lat": 49.16262642608232,
-        "lng": -2.3071289062500004
-      }
-    },
-    {
-      "id": "9c71",
-      "cityName": "Ballots",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2026-02-19T16:12:25.686Z",
-      "notes": "",
-      "position": {
-        "lat": 47.90368942650422,
-        "lng": -1.0986328125000002
-      }
-    },
-    {
-      "id": "d778",
-      "cityName": "Ballots",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2026-02-19T16:12:25.686Z",
-      "notes": "",
-      "position": {
-        "lat": 48.357493162916334,
-        "lng": -3.4936523437500004
+        "lat": 46.04344775951758,
+        "lng": -113.02734375000001
       }
     }
   ]

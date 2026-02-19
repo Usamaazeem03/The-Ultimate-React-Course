@@ -52,9 +52,33 @@ function CitiesProvider({ children }) {
       setIsLoading(false);
     }
   }
+  async function getCity(id) {
+    try {
+      const response = await fetch(`http://localhost:8000/cities/${id}`);
+      const data = await response.json();
+      setCurrentCity(data);
+    } catch (error) {
+      console.error("Error fetching city:", error);
+    }
+  }
+
+  async function deleteCity(id) {
+    setIsLoading(true);
+    try {
+      await fetch(`http://localhost:8000/cities/${id}`, {
+        method: "DELETE",
+      });
+
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch (error) {
+      console.error("Error delete city:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
   return (
     <CitiesContext.Provider
-      value={{ cities, isLoading, currentCity, getCity, creatCity }}
+      value={{ cities, isLoading, currentCity, getCity, creatCity, deleteCity }}
     >
       {children}
     </CitiesContext.Provider>

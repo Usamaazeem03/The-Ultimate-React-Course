@@ -11,9 +11,13 @@ const formatDate = (dateString) =>
   }).format(new Date(dateString));
 
 function CityItem({ city }) {
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
   console.log(position);
+  function handleClick(e) {
+    e.preventDefault();
+    deleteCity(id);
+  }
 
   return (
     <li>
@@ -33,6 +37,7 @@ function CityItem({ city }) {
           type="button"
           className={styles.deleteBtn}
           aria-label={`Delete ${cityName}`}
+          onClick={handleClick}
         >
           ×
         </button>
