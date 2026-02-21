@@ -31,7 +31,7 @@ function Form() {
 
   const navigate = useNavigate();
   const [lat, lng] = useUrlPosition();
-  const { creatCity, isLoading } = useCities();
+  const { createCity, isLoading } = useCities();
   async function handleSubmit(e) {
     e.preventDefault();
     if (!cityName || !date) return;
@@ -46,7 +46,7 @@ function Form() {
         lng,
       },
     };
-    await creatCity(newCity);
+    await createCity(newCity);
     navigate("/app/cities");
   }
 
