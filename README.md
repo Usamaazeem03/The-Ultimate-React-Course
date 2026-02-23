@@ -172,7 +172,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 19:** More Practise Advance Patten (deep Context API),work with map, Jsom-Server(Fake API)fetch post deleting,✅
 
-- **Week 20:** This week also Context API or useReducer hook, understand how Authentication help of fake auth, [CHALLENGE](.\14-Section16-The-Advanced-useReducer-Hook\01-react-quiz\src\context\QuizContext.jsx)✅
+- **Week 20:** This week also Context API or useReducer hook, understand how Authentication help of fake auth, [CHALLENGE](./14-Section16-The-Advanced-useReducer-Hook/01-react-quiz/src/context/QuizContext.jsx)✅
 
 ---
 
