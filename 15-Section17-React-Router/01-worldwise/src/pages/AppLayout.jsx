@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import Map from "../components/Map";
 import styles from "./AppLayout.module.css";
+import User from "../components/User";
 
 function AppLayout() {
   const [sidebarWidth, setSidebarWidth] = useState(450);
@@ -40,6 +41,7 @@ function AppLayout() {
       </div>
       <div className={styles.mapWrapper}>
         <Map />
+        <User />
       </div>
     </div>
   );

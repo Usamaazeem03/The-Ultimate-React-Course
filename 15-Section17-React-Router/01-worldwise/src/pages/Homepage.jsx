@@ -25,7 +25,7 @@ function Home() {
             think of.
           </p>
 
-          <Link to="/app" className="cta">
+          <Link to="/login" className="cta">
             Start your journey
           </Link>
         </section>
