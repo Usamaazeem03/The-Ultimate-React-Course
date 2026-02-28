@@ -59,6 +59,30 @@
         "lat": 48.92735839730392,
         "lng": 8.239746093750002
       }
+    },
+    {
+      "id": "a02d",
+      "cityName": "Petersfield",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2026-02-28T11:34:57.056Z",
+      "notes": "",
+      "position": {
+        "lat": 51.12116966117441,
+        "lng": -0.7910156250000001
+      }
+    },
+    {
+      "id": "f91a",
+      "cityName": "Wissous",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2026-02-28T11:35:06.549Z",
+      "notes": "",
+      "position": {
+        "lat": 48.729759475201746,
+        "lng": 2.3291015625000004
+      }
     }
   ]
 }
