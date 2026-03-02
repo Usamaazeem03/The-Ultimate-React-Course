@@ -1,87 +1,27 @@
 {
   "cities": [
     {
-      "id": "d468",
-      "cityName": "Faisalabad",
-      "country": "Pakistan",
-      "emoji": "🇵🇰",
-      "date": "2026-02-20T12:04:36.617Z",
-      "notes": "",
-      "position": {
-        "lat": 31.413255779692854,
-        "lng": 73.15795898437501
-      }
-    },
-    {
-      "id": "3ad5",
-      "cityName": "Bonningues-les-Ardres",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2026-02-21T12:04:18.146Z",
-      "notes": "",
-      "position": {
-        "lat": 50.753788444317756,
-        "lng": 2.0214843750000004
-      }
-    },
-    {
-      "id": "28af",
-      "cityName": "Towcester",
+      "id": "6b7a",
+      "cityName": "Hemel Hempstead",
       "country": "United Kingdom of Great Britain and Northern Ireland (the)",
       "emoji": "🇬🇧",
-      "date": "2026-02-21T12:04:34.250Z",
+      "date": "2026-03-02T18:18:26.506Z",
       "notes": "",
       "position": {
-        "lat": 52.12169267438445,
-        "lng": -1.0107421875000002
+        "lat": 51.797605776438644,
+        "lng": -0.5231095577233426
       }
     },
     {
-      "id": "bbd2",
-      "cityName": "Schwalmstadt",
+      "id": "9df0",
+      "cityName": "Saarbrucken",
       "country": "Germany",
       "emoji": "🇩🇪",
-      "date": "2026-02-21T12:05:01.588Z",
+      "date": "2026-03-02T18:18:44.018Z",
       "notes": "",
       "position": {
-        "lat": 50.9205616966907,
-        "lng": 9.250488281250002
-      }
-    },
-    {
-      "id": "2f19",
-      "cityName": "Durmersheim",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2026-02-21T12:09:49.195Z",
-      "notes": "",
-      "position": {
-        "lat": 48.92735839730392,
-        "lng": 8.239746093750002
-      }
-    },
-    {
-      "id": "a02d",
-      "cityName": "Petersfield",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "🇬🇧",
-      "date": "2026-02-28T11:34:57.056Z",
-      "notes": "",
-      "position": {
-        "lat": 51.12116966117441,
-        "lng": -0.7910156250000001
-      }
-    },
-    {
-      "id": "f91a",
-      "cityName": "Wissous",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2026-02-28T11:35:06.549Z",
-      "notes": "",
-      "position": {
-        "lat": 48.729759475201746,
-        "lng": 2.3291015625000004
+        "lat": 49.22891949363849,
+        "lng": 6.84060986123396
       }
     }
   ]
