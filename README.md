@@ -129,6 +129,10 @@ I am using this repo as my personal learning log help others + project showcase.
 │ ├── 00-Overview.txt
 │ └── 01-atomic-blog → (understand codebase)
 │
+├── 17-Section19-Performance-Optimization-Advanced/
+│ ├── 00-Overview.txt
+│ └── ---worldwise → (is done ✅)
+│
 └── README.md → You are here!
 ```
 
@@ -175,6 +179,8 @@ I am using this repo as my personal learning log help others + project showcase.
 - **Week 20:** This week also Context API or useReducer hook, understand how Authentication help of fake auth, [CHALLENGE](./14-Section16-The-Advanced-useReducer-Hook/01-react-quiz/src/context/QuizContext.jsx)✅
 
 - **Week 21:** memo, useMemo, useCallback, React.lazy, [worldwise is done i realy love this project](./15-Section17-React-Router/01-worldwise/README.md) ✅
+
+- **Week 22:**
 
 ---
 

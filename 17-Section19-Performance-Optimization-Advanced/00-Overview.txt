@@ -1,0 +1,4 @@
+// Section19 Performance Optimization Advanced Useeffect
+👉 Analyzing wasted renders
+👉 Optimizing Performance
+👉 Deep dive into useEffect hook
