@@ -174,6 +174,8 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 20:** This week also Context API or useReducer hook, understand how Authentication help of fake auth, [CHALLENGE](./14-Section16-The-Advanced-useReducer-Hook/01-react-quiz/src/context/QuizContext.jsx)✅
 
+- **Week 21:** memo, useMemo, useCallback, React.lazy, [worldwise is done i realy love this project](./15-Section17-React-Router/01-worldwise/README.md) ✅
+
 ---
 
 ## ⚡ Getting Started
