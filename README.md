@@ -131,6 +131,7 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 17-Section19-Performance-Optimization-Advanced/
 │ ├── 00-Overview.txt
+│ ├── 01-workout-timer → (Performance Optimization)
 │ └── ---worldwise → (is done ✅)
 │
 └── README.md → You are here!
@@ -180,7 +181,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 21:** memo, useMemo, useCallback, React.lazy, [worldwise is done i realy love this project](./15-Section17-React-Router/01-worldwise/README.md) ✅
 
-- **Week 22:**
+- **Week 22:** UnderStand More useEffect Rules and Best Practices, Closures in useEffect[CHALLENGE UNDERSTAND CODEBASS OR OPTIMIZ PROFORMANCE]()
 
 ---
 
