@@ -188,7 +188,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 22:** UnderStand More useEffect Rules and Best Practices, Closures in useEffect[CHALLENGE UNDERSTAND CODEBASS OR OPTIMIZ PROFORMANCE](./17-Section19-Performance-Optimization-Advanced/01-workout-timer/README.md),start understanding Redux or Redux Tool, Redux Store, action creater function,✅
 
-- **Week 23:**
+- **Week 23:** Redux in deep,Redux Store, action creater function,Redux File Structure,Dispatching, Redux Middleware and Thunks,Making API call with Redux,redux-devtools ✅
 
 ---
 
