@@ -190,6 +190,8 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 23:** Redux in deep,Redux Store, action creater function,Redux File Structure,Dispatching, Redux Middleware and Thunks,Making API call with Redux,redux-devtools ✅
 
+- **Week 24:** Redux Toolkit, configureStore, createSlice,
+
 ---
 
 ## ⚡ Getting Started
