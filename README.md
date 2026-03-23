@@ -136,7 +136,10 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 18-Section20-Redux-Tool/
 │ ├── 00-Overview.txt
-│ ├── 01-Redux-intro
+│ └── 01-Redux-intro
+│
+├── 19-Section22-React-Router-With-Date-Loading/
+│ ├── 00-Overview.txt
 │ └──
 │
 └── README.md → You are here!
@@ -190,7 +193,7 @@ I am using this repo as my personal learning log help others + project showcase.
 
 - **Week 23:** Redux in deep,Redux Store, action creater function,Redux File Structure,Dispatching, Redux Middleware and Thunks,Making API call with Redux,redux-devtools ✅
 
-- **Week 24:** Redux Toolkit, configureStore, createSlice,Middleware(Thunks)
+- **Week 24:** Redux Toolkit, configureStore, createSlice,Middleware(Thunks),start understand deep react-routes like createBrowserRouter,and how fetching data with React Router ✅
 
 ---
 
