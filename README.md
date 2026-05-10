@@ -140,6 +140,10 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 19-Section22-React-Router-With-Date-Loading/
 │ ├── 00-Overview.txt
+│ └── 01-fast-react-pizza
+│
+├── 20-Section23-TailwindCSS-Crash-Course/
+│ ├── 00-Overview.txt
 │ └──
 │
 └── README.md → You are here!
@@ -192,7 +196,10 @@ I am using this repo as my personal learning log help others + project showcase.
 - **Week 22:** UnderStand More useEffect Rules and Best Practices, Closures in useEffect[CHALLENGE UNDERSTAND CODEBASS OR OPTIMIZ PROFORMANCE](./17-Section19-Performance-Optimization-Advanced/01-workout-timer/README.md),start understanding Redux or Redux Tool, Redux Store, action creater function,✅
 
 - **Week 23:** Redux in deep,Redux Store, action creater function,Redux File Structure,Dispatching, Redux Middleware and Thunks,Making API call with Redux,redux-devtools ✅
-- **Week 25:** [React Router](./19-Section22-React-Router-With-Date-Loading/fast-react-pizza/README.md), useNavigation(), useRouteError(), useActionData()
+
+- **Week 25:** [React Router](./19-Section22-React-Router-With-Date-Loading/fast-react-pizza/README.md), Outlet Element ,useNavigation(), useRouteError(), useLoaderData, redirect(), useActionData() ✅
+
+- **Week 26:** TailwindCSS,
 
 ---
 

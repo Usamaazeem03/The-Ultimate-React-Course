@@ -1,0 +1,12 @@
+//Tailwind CSS Crash Course
+ 👉 A complete Tailwind CSS Crash Course
+ __ Super popular technology
+ 
+ // what is Tailwind CSS ?
+ Tailwind  A utiliy-first CSS frameWork packed with utiliy Classes like flex ,text-center and rotate-90 the can be build any design, directly in your markup(HTML or JSX)
+
+ // what is utiliy_first CSS approach?
+ writing tiny classes(h-12 w-12) with one single purpoese, and then combining them to build entire layouts.
+
+// In Tailwind these classes are already written for us.
+So we,re not gonna write any new CSS, but instead use of Tailwind's hunderds of classes
