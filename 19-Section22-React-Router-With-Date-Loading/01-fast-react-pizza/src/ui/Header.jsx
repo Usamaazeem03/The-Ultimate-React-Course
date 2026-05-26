@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SearchOrder from "../feactures/menu/SearchOrder";
+import SearchOrder from "../feactures/order/SearchOrder";
 import UserName from "../feactures/usar/userName";
 
 function Header() {
