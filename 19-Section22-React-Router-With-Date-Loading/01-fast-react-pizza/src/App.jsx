@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: "/card",
+        path: "/cart",
         element: <Card />,
       },
       {
