@@ -27,7 +27,7 @@ const TableHeader = styled.header`
   color: var(--color-grey-600);
   padding: 1.6rem 2.4rem;
 `;
-
+// load date in supebase help of useQuery this function getCabine took data
 function CabinTable() {
   const { isLoading, data: cabins } = useQuery({
     queryKey: ["cabins"],
@@ -46,6 +46,7 @@ function CabinTable() {
         <div></div>
       </TableHeader>
       {cabins.map((cabin) => (
+        // then pase cabinRow
         <CabinRow cabin={cabin} key={cabin.id} />
       ))}
     </Table>
