@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { formatCurrency } from "../../utils/helpers";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { deleteCabin } from "../../services/apiCabins";
-import toast from "react-hot-toast";
+
 import { useState } from "react";
 import CreateCabinForm from "./CreateCabinForm";
+import { useDeleteCabin } from "./useDeleteCabin";
 
 const TableRow = styled.div`
   display: grid;
@@ -47,6 +46,8 @@ const Discount = styled.div`
 `;
 function CabinRow({ cabin }) {
   const [showForm, setShowForm] = useState(false);
+  // use useDeleteCabin hook
+  const { isDeleting, deleteCabin } = useDeleteCabin();
   // destructured the data
   const {
     id: cabinId,
@@ -57,18 +58,6 @@ function CabinRow({ cabin }) {
     image,
   } = cabin;
 
-  // this function delete cabin help of this function deleteCabin this fun.. to supebase
-  const queryClient = useQueryClient();
-  const { isLoading: isDeleting, mutate } = useMutation({
-    mutationFn: (id) => deleteCabin(id),
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        assertLiteral: toast.success("Cabin sucessfully deleted"),
-        queryKey: ["cabins"],
-      });
-    },
-    onError: (err) => toast.err(err.message),
-  });
   return (
     <>
       <TableRow role="row">
@@ -76,13 +65,17 @@ function CabinRow({ cabin }) {
         <Cabin>{name}</Cabin>
         <div>Fits up to {maxCapacity}</div>
         <Price>{formatCurrency(regularPrice)}</Price>
-        <Discount>{formatCurrency(discount)}</Discount>
-        <dev>
+        {discount ? (
+          <Discount>{formatCurrency(discount)}</Discount>
+        ) : (
+          <span>&mdash;</span>
+        )}
+        <div>
           <button onClick={() => setShowForm((show) => !show)}>Edit</button>
-          <button disabled={isDeleting} onClick={() => mutate(cabinId)}>
+          <button disabled={isDeleting} onClick={() => deleteCabin(cabinId)}>
             Delete
           </button>
-        </dev>
+        </div>
       </TableRow>
       {/* i think to reused  CreateCabinForm pase the data(cabinToEdit) by prop*/}
       {showForm && <CreateCabinForm cabinToEdit={cabin} />}

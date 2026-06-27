@@ -12,7 +12,10 @@ export async function getCabine() {
 }
 
 // add
-export async function createCabin(newCabin) {
+export async function createEditCabin(newCabin, id) {
+  // reuse img componet chinking
+  const hasImagePath = newCabin.image?.startsWith?.(supabaseUrl);
+
   // this make new cabin
   // need to tow think after to upload image(or any file) __1_ unique name,__2 _ Make url cataining the path to the bueket
   // 1_ unique name
@@ -20,14 +23,21 @@ export async function createCabin(newCabin) {
     "/",
     "",
   );
-
+  // using
   // 2_Make Url
-  const imagePath = `${supabaseUrl}/storage/v1/object/public/cabin-images/${ImageName}`;
+  const imagePath = hasImagePath
+    ? newCabin.image
+    : `${supabaseUrl}/storage/v1/object/public/cabin-images/${ImageName}`;
 
-  const { data, error } = await supabase
-    .from("cabins")
-    .insert([{ ...newCabin, image: imagePath }]);
+  // 1)create / edit cabin
+  let query = supabase.from("cabins");
+  // A) CREATE
+  if (!id) query = query.insert([{ ...newCabin, image: imagePath }]);
 
+  // B) EDIT
+  if (id) query = query.update({ ...newCabin, image: imagePath }).eq("id", id);
+  const { data, error } = await query.select().single();
+  // error handling
   if (error) {
     console.error(error);
     throw new Error("Cabins could not be Create");
