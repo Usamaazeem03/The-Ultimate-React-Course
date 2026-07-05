@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 import { useCreateCabin } from "./useCreateCabin";
 import { useEditCabin } from "./useEditCabin";
 
-function CreateCabinForm({ cabinToEdit = {} }) {
+function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
   // start edit destructured the data or i make isEditSession to figure i use this foem to make NewCabin or i use this form edit existed cabin
   const { id: editId, ...editValues } = cabinToEdit;
   const isEditSession = Boolean(editId);
@@ -37,8 +37,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
       editCabin(
         { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess: (data) => {
-            console.log(data);
+          onSuccess: () => {
             reset({
               name: "",
               maxCapacity: "",
@@ -47,6 +46,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
               description: "",
               image: "",
             });
+            onCloseModal?.();
           },
         },
       );
@@ -55,16 +55,20 @@ function CreateCabinForm({ cabinToEdit = {} }) {
       createCabin(
         { ...data, image: image },
         {
-          onSuccess: (data) => {
-            console.log(data);
+          onSuccess: () => {
+            // console.log(data);
             reset();
+            onCloseModal?.();
           },
         },
       );
     }
   }
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
+    <Form
+      onSubmit={handleSubmit(onSubmit)}
+      type={onCloseModal ? "modal" : "regular"}
+    >
       <FormRow label="Cabin name" error={errors?.name?.message}>
         <Input
           type="text"
@@ -134,7 +138,11 @@ function CreateCabinForm({ cabinToEdit = {} }) {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button variation="secondary" type="reset">
+        <Button
+          $variation="secondary"
+          type="reset"
+          onClick={() => onCloseModal?.()}
+        >
           Cancel
         </Button>
 
@@ -147,6 +155,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
 }
 CreateCabinForm.propTypes = {
   cabinToEdit: PropTypes.object,
+  onCloseModal: PropTypes.func,
 };
 
 export default CreateCabinForm;
