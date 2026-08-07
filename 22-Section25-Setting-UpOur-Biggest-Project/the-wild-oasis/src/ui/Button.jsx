@@ -48,14 +48,16 @@ const variations = {
   `,
 };
 
-const Button = styled.button`
+const Button = styled.button.withConfig({
+  shouldForwardProp: (prop) => !["variation", "size"].includes(prop),
+})`
   border: none;
   border-radius: var(--border-radius-sm);
 
   box-shadow: var(--shadow-sm);
 
-  ${(props) => sizes[props.$size || "medium"]}
-  ${(props) => variations[props.$variation || "primary"]}
+  ${(props) => sizes[props.$size || props.size || "medium"]}
+  ${(props) => variations[props.$variation || props.variation || "primary"]}
 `;
 // Button.defaultProps = {
 //   variations: "primary",

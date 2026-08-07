@@ -13,7 +13,16 @@ export function useDeleteCabin() {
         queryKey: ["cabins"],
       });
     },
-    onError: (err) => toast.err(err.message),
+    onError: (err) => {
+      if (err.code === "23503") {
+        toast(
+          "This cabin cannot be deleted because it has existing bookings.",
+          { icon: "⚠️" },
+        );
+      } else {
+        toast.error(err.message);
+      }
+    },
   });
 
   return { isDeleting, deleteCabin };

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+import { createContext, useContext } from "react";
 import styled from "styled-components";
 
 const StyledTable = styled.div`
@@ -11,7 +13,7 @@ const StyledTable = styled.div`
 
 const CommonRow = styled.div`
   display: grid;
-  grid-template-columns: ${(props) => props.columns};
+  grid-template-columns: ${(props) => props.$columns};
   column-gap: 2.4rem;
   align-items: center;
   transition: none;
@@ -40,7 +42,7 @@ const StyledBody = styled.section`
   margin: 0.4rem 0;
 `;
 
-const Footer = styled.footer`
+const StyledFooter = styled.footer`
   background-color: var(--color-grey-50);
   display: flex;
   justify-content: center;
@@ -58,3 +60,61 @@ const Empty = styled.p`
   text-align: center;
   margin: 2.4rem;
 `;
+
+const TableContext = createContext();
+
+function Table({ columns, children }) {
+  return (
+    <TableContext.Provider value={{ columns }}>
+      <StyledTable role="table">{children}</StyledTable>
+    </TableContext.Provider>
+  );
+}
+
+function Header({ children }) {
+  const { columns } = useContext(TableContext);
+  return <StyledHeader $columns={columns}>{children}</StyledHeader>;
+}
+function Row({ children }) {
+  const { columns } = useContext(TableContext);
+  return <StyledRow $columns={columns}>{children}</StyledRow>;
+}
+
+function Body({ data, render }) {
+  if (data.length === 0) {
+    return <Empty>No data available</Empty>;
+  }
+  return <StyledBody role="table">{data.map(render)}</StyledBody>;
+}
+function Footer({ children }) {
+  return <StyledFooter>{children}</StyledFooter>;
+}
+
+Table.Header = Header;
+Table.Row = Row;
+Table.Body = Body;
+Table.Footer = Footer;
+
+Table.propTypes = {
+  columns: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+Header.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+Row.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+Body.propTypes = {
+  data: PropTypes.array.isRequired,
+  render: PropTypes.func.isRequired,
+};
+
+Footer.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Table;

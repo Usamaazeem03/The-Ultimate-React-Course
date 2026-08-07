@@ -6,6 +6,17 @@ import Table from "../../ui/Table";
 
 import { formatCurrency } from "../../utils/helpers";
 import { formatDistanceFromNow } from "../../utils/helpers";
+import PropTypes from "prop-types";
+import Menus from "../../ui/Menus";
+import {
+  HiArrowDownOnSquare,
+  HiArrowUpOnSquare,
+  HiEye,
+  HiTrash,
+} from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
+import { useCheckout } from "../check-in-out/useCheckiout";
+import { useDeleteBooking } from "./useDeleteBooking";
 
 const Cabin = styled.div`
   font-size: 1.6rem;
@@ -37,17 +48,21 @@ const Amount = styled.div`
 function BookingRow({
   booking: {
     id: bookingId,
-    created_at,
+    // created_at,
     startDate,
     endDate,
     numNights,
-    numGuests,
+    // numGuests,
     totalPrice,
     status,
     guests: { fullName: guestName, email },
     cabins: { name: cabinName },
   },
 }) {
+  const navigate = useNavigate();
+  const { checkout, isCheckingOut } = useCheckout();
+  const { isDeleting, deleteBooking } = useDeleteBooking();
+
   const statusToTagName = {
     unconfirmed: "blue",
     "checked-in": "green",
@@ -79,8 +94,66 @@ function BookingRow({
       <Tag type={statusToTagName[status]}>{status.replace("-", " ")}</Tag>
 
       <Amount>{formatCurrency(totalPrice)}</Amount>
+      <Menus.Menu>
+        <Menus.Toggle id={bookingId} />
+        <Menus.List id={bookingId}>
+          {" "}
+          <Menus.Button
+            icon={<HiEye />}
+            onClick={() => navigate(`/bookings/${bookingId}`)}
+          >
+            See details
+          </Menus.Button>
+          {status === "unconfirmed" && (
+            <Menus.Button
+              onClick={() => navigate(`/checkin/${bookingId}`)}
+              icon={<HiArrowDownOnSquare />}
+            >
+              Check in
+            </Menus.Button>
+          )}
+          {status === "checked-in" && (
+            <Menus.Button
+              onClick={() => checkout(bookingId)}
+              disabled={isCheckingOut}
+              icon={<HiArrowUpOnSquare />}
+            >
+              Check out
+            </Menus.Button>
+          )}
+          {
+            <Menus.Button
+              onClick={() => deleteBooking(bookingId)}
+              disabled={isDeleting}
+              icon={<HiTrash />}
+            >
+              Delete
+            </Menus.Button>
+          }
+        </Menus.List>
+      </Menus.Menu>
     </Table.Row>
   );
 }
+
+BookingRow.propTypes = {
+  booking: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    created_at: PropTypes.string,
+    startDate: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    numNights: PropTypes.number.isRequired,
+    numGuests: PropTypes.number,
+    totalPrice: PropTypes.number.isRequired,
+    status: PropTypes.string.isRequired,
+    guests: PropTypes.shape({
+      fullName: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    }).isRequired,
+    cabins: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default BookingRow;

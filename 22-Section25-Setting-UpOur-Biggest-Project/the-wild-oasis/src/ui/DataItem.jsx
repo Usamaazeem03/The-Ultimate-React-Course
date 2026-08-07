@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const StyledDataItem = styled.div`
@@ -32,4 +33,9 @@ function DataItem({ icon, label, children }) {
   );
 }
 
+DataItem.propTypes = {
+  icon: PropTypes.node,
+  label: PropTypes.string,
+  children: PropTypes.node,
+};
 export default DataItem;

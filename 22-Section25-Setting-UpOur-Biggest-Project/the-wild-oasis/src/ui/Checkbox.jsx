@@ -24,7 +24,7 @@ const StyledCheckbox = styled.div`
     gap: 0.8rem;
   }
 `;
-
+/* eslint-disable react/prop-types */
 function Checkbox({ checked, onChange, disabled = false, id, children }) {
   return (
     <StyledCheckbox>

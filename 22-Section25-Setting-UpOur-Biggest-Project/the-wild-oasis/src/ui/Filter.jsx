@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+import { useSearchParams } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const StyledFilter = styled.div`
@@ -15,7 +17,7 @@ const FilterButton = styled.button`
   border: none;
 
   ${(props) =>
-    props.active &&
+    props.$isActive &&
     css`
       background-color: var(--color-brand-600);
       color: var(--color-brand-50);
@@ -33,3 +35,42 @@ const FilterButton = styled.button`
     color: var(--color-brand-50);
   }
 `;
+
+function Filter({ filterField, options }) {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const currentFilter = searchParams.get(filterField) || options[0].value;
+  function handleFilterClick(value) {
+    searchParams.set(filterField, value);
+    if (searchParams.get("page")) searchParams.set("page", 1);
+    setSearchParams(searchParams);
+  }
+  return (
+    <StyledFilter>
+      {/* <FilterButton onClick={() => handleFilterClick("all")}>All</FilterButton>
+      <FilterButton onClick={() => handleFilterClick("without-discount")}>
+        Without discount
+      </FilterButton> */}
+      {options.map((option) => (
+        <FilterButton
+          onClick={() => handleFilterClick(option.value)}
+          key={option.value}
+          $isActive={currentFilter === option.value}
+          // active={currentFilter === option.value}
+          disabled={currentFilter === option.value}
+        >
+          {option.label}
+        </FilterButton>
+      ))}
+    </StyledFilter>
+  );
+}
+Filter.propTypes = {
+  filterField: PropTypes.string,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
+export default Filter;
