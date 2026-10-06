@@ -1,0 +1,8 @@
+// Advanced React Patterns😏
+
+👉 Advanced Patterns used by senior React engineers
+👉 Render props
+👉 Higher order components
+👉 Compound components
+👉 Reusable modal window and context menu
+👉 unique content

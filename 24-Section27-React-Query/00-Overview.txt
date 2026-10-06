@@ -1,0 +1,7 @@
+// React Query
+// use the-wild-oasis project
+👉 Remote state management
+👉 React Query will take over data fetching and storage
+👉 🪄This feels magical
+-------------------------------------------
+👉 anther library: REACT HOOK FORM

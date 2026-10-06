@@ -140,11 +140,37 @@ I am using this repo as my personal learning log help others + project showcase.
 │
 ├── 19-Section22-React-Router-With-Date-Loading/
 │ ├── 00-Overview.txt
-│ └── 01-fast-react-pizza
+
 │
 ├── 20-Section23-TailwindCSS-Crash-Course/
 │ ├── 00-Overview.txt
 │ └──
+│
+├── 21-Section24-Adding-Redux-Advanced-React-Router/
+│ ├── 00-Overview.txt
+│ └── 01-fast-react-pizza
+│
+├── 22-Section25-Setting-UpOur-Biggest-Project/
+│ ├── 00-Overview.txt
+│ └── the-wild-oasis
+│
+├── 23-Section26-Supabase/
+│ ├── 00-Overview.txt
+│ └── the-wild-oasis
+│
+├── 24-Section27-React-Query/
+│ ├── 00-Overview.txt
+│ └── the-wild-oasis
+│
+├── 25-Section28-Advanced-React-Patterns/
+│ ├── 00-Overview.txt
+│ └── the-wild-oasis
+│
+├── [https://www.lunara-booking.com/]
+│
+├── 26-Section32-Overview-of-Next.js/
+│ ├── 00-Overview.txt
+│ └── manual-ssr/
 │
 └── README.md → You are here!
 ```
@@ -200,6 +226,14 @@ I am using this repo as my personal learning log help others + project showcase.
 - **Week 25:** [React Router](./19-Section22-React-Router-With-Date-Loading/fast-react-pizza/README.md), Outlet Element ,useNavigation(), useRouteError(), useLoaderData, redirect(), useActionData() ✅
 
 - **Week 26:** TailwindCSS,
+
+- **Week 27:** Redux-Advanced + React-Router, useLoaderData, useFetcher,
+
+- **Week 28:** Supabase,
+
+- **Week 29 i dont know What is this week but i write 29:** i build lunara its tomuch time but that is good industry standard project in anyone interst click this link [https://www.lunara-booking.com/],
+
+- **Week 30:** Overview Next.js
 
 ---
 

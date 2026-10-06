@@ -1,0 +1,4 @@
+// Redux and React Router
+👉 Implementing a shopping card 
+👉 Advanced parts of Redux
+👉 Real-word use cases of React

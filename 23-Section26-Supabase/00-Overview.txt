@@ -1,0 +1,5 @@
+// supabase
+// use the-wild-oasis project
+ 👉 Plan application data
+ 👉 Model relayionships between data tables
+ 👉 load data into the app via Supabase API
